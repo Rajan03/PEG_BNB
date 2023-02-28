@@ -33,11 +33,11 @@ const Hero: React.FC<Props> = (props: Props) => {
       className={
         "container m-auto flex items-center " +
         "flex-col-reverse justify-start gap-y-28 px-7 py-48 " +
-        "md:h-[calc(100vh_-_8rem)] md:flex-row md:gap-x-14 md:gap-y-0 md:justify-between md:py-7"
+        "md:h-screen md:flex-row md:gap-x-14 md:gap-y-0 md:justify-between md:py-7"
       }
     >
       {/* IMAGE 01 */}
-      <div
+      <motion.div
         className="hidden lg:block max-w-[24rem] max-h-[39rem] w-[24rem] h-[39rem] rounded-full 
       relative before:absolute before:inset-0 before:border-2 before:border-primary-600 
       before:border-dashed before:rounded-full before:-right-7 before:-bottom-3 before:z-[-1]"
@@ -58,7 +58,7 @@ const Hero: React.FC<Props> = (props: Props) => {
           priority
           className="h-[7rem] w-[7rem] object-contain absolute top-[-4rem] right-[-5rem] animate-bounce"
         />
-      </div>
+      </motion.div>
 
       {/* CONTENT */}
       <div className="md:flex-1 flex flex-col items-center gap-y-12">

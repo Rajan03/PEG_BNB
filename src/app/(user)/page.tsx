@@ -8,6 +8,9 @@ export default function Home(): React.ReactNode {
     <>
       {/* HERO SECTION */}
       <Hero {...heroData} />
+
+      {/* ABOUT SECTION */}
+      <div className="min-h-[100rem]"></div>
     </>
   );
 }

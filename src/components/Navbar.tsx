@@ -14,7 +14,7 @@ export default function Navbar(): JSX.Element {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="h-[8rem] bg-white shadow-lg w-full p-1 sticky top-0"
+        className="h-[8rem] bg-white shadow-lg w-full p-1 fixed top-0 z-50"
       >
         <div className="flex justify-between items-center min-h-full md:container mx-auto">
           <Logo />
@@ -50,9 +50,7 @@ export default function Navbar(): JSX.Element {
           </div>
 
           {/* Hamburger Menu */}
-          <div className="absolute top-0 right-0 flex md:hidden flex-col justify-start items-end space-x-4 w-screen sm:w-[50rem] h-screen">
-            <Sidebar />
-          </div>
+          <Sidebar />
         </div>
       </motion.nav>
     </>
