@@ -24,7 +24,7 @@ export default function RootLayout({
           <Navbar />
 
           {/* Children */}
-          {children}
+          <div className="min-h-[calc(100vh_-_8rem)]">{children}</div>
 
           {/* Footer */}
         </body>

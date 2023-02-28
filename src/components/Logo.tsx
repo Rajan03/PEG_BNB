@@ -1,4 +1,4 @@
-import { LOGOJPG } from "@/constant/constant";
+import { LOGOJPG } from "@/constant/images";
 import Image from "next/image";
 
 type Props = {
@@ -34,5 +34,3 @@ export default function Logo(props: Props): JSX.Element {
     </>
   );
 }
-
-// fill={props.color || "#A2484F"}

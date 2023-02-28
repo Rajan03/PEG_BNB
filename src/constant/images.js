@@ -12,6 +12,10 @@ import HOME03IMG2 from "../assets/home03/02.jpg";
 import HOME03IMG3 from "../assets/home03/03.jpg";
 import HOME03IMG4 from "../assets/home03/04.jpg";
 
+import PLANE from "../assets/icons/Plane.svg";
+import DOTS from "../assets/icons/Dots.svg";
+import LOGOJPG from "../assets/logoJpg.jpg";
+
 export {
   HOME01IMG1,
   HOME01IMG2,
@@ -24,4 +28,7 @@ export {
   HOME03IMG2,
   HOME03IMG3,
   HOME03IMG4,
+  PLANE,
+  DOTS,
+  LOGOJPG,
 };
