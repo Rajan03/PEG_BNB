@@ -4,10 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { NavRoutes } from "@/constant/data";
 import Logo from "./Logo";
-import {
-  Bars3CenterLeftIcon,
-  PhoneArrowUpRightIcon,
-} from "@heroicons/react/24/solid";
+import { PhoneArrowUpRightIcon } from "@heroicons/react/24/solid";
 import Sidebar from "./Sidebar";
 
 export default function Navbar(): JSX.Element {

@@ -17,7 +17,7 @@ export default function RootLayout({
       <html lang="en" className={"text-[45%] sm:text-[52%] xl:text-[64.5%]"}>
         <body
           className={
-            poppins.className + " scrollbar-hide min-h-screen bg-slate-100"
+            poppins.className + " scrollbar-hide min-h-screen bg-white"
           }
         >
           {/* Navbar */}
