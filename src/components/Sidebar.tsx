@@ -67,7 +67,7 @@ const NavSidebar: FC = () => {
         exit={isOpen ? "closed" : "open"}
       ></motion.div>
 
-      <div className="md:hidden absolute top-0 right-0 h-[8rem] flex flex-col justify-center items-center pr-9 z-[52]">
+      <div className="md:hidden fixed top-0 right-0 h-[8rem] flex flex-col justify-center items-center pr-9 z-[52]">
         <MenuToggle
           toggle={() => toggleOpen()}
           styleClass={"text-primary-600"}
