@@ -1,5 +1,5 @@
 import { HomeData } from "@/constant/data";
-import { Hero } from "@/sections";
+import { Hero, SearchFilter } from "@/sections";
 
 export default function Home(): React.ReactNode {
   const { heroData } = HomeData;
@@ -10,7 +10,7 @@ export default function Home(): React.ReactNode {
       <Hero {...heroData} />
 
       {/* ABOUT SECTION */}
-      <div className="min-h-[100rem]"></div>
+      <SearchFilter />
     </>
   );
 }

@@ -25,6 +25,7 @@ export default function RootLayout({
           {/* Children */}
           <div className="min-h-screen">{children}</div>
           <div className="sidebar" />
+          <div className="modal" />
 
           {/* Footer */}
         </body>

@@ -3,7 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import { useCycle, motion } from "framer-motion";
 import { Bars3CenterLeftIcon, XCircleIcon } from "@heroicons/react/24/solid";
-import { SidebarPortal } from "./SidebarPortal";
+import { SidebarPortal } from "./Portals";
 
 const animationVariants = {
   open: {

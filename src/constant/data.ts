@@ -60,3 +60,69 @@ const heroData = {
 export const HomeData = {
   heroData,
 };
+
+export const LocationsOption = [
+  {
+    label: "New York",
+    value: "new-york",
+  },
+  {
+    label: "Los Angeles",
+    value: "los-angeles",
+  },
+  {
+    label: "Chicago",
+    value: "chicago",
+  },
+  {
+    label: "Houston",
+    value: "houston",
+  },
+  {
+    label: "Philadelphia",
+    value: "philadelphia",
+  },
+  {
+    label: "Phoenix",
+    value: "phoenix",
+  },
+  {
+    label: "San Antonio",
+    value: "san-antonio",
+  },
+  {
+    label: "San Diego",
+    value: "san-diego",
+  },
+  {
+    label: "Dallas",
+    value: "dallas",
+  },
+  {
+    label: "San Jose",
+    value: "san-jose",
+  },
+];
+
+export const GuestsOption = [
+  {
+    label: "1 Guest",
+    value: "1",
+  },
+  {
+    label: "2 Guests",
+    value: "2",
+  },
+  {
+    label: "3 Guests",
+    value: "3",
+  },
+  {
+    label: "4 Guests",
+    value: "4",
+  },
+  {
+    label: "5 Guests",
+    value: "5",
+  },
+];
