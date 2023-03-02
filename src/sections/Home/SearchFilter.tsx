@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { DropDownModal } from "@/components";
+import { SetStateAction, useState } from "react";
+import { DateRangeModal, DropDownModal } from "@/components";
 import { GuestsOption, LocationsOption } from "@/constant/data";
 import { MapIcon, UsersIcon } from "@heroicons/react/24/solid";
 
@@ -11,6 +11,10 @@ export const SearchFilter = () => {
 
   const [selectedLocation, setSelectedLocation] = useState(LOptions[0]);
   const [selectedGuests, setSelectedGuests] = useState(GOptions[0]);
+  const [selectedDates, setSelectedDates] = useState([
+    new Date(),
+    new Date(new Date().setDate(new Date().getDate() + 1)),
+  ]);
 
   return (
     <>
@@ -27,13 +31,10 @@ export const SearchFilter = () => {
           />
 
           {/* Date range Picker */}
-          <DropDownModal
-            options={LOptions}
-            selected={selectedLocation}
-            setSelected={setSelectedLocation}
-            className="flex-1"
-            modalHeader="Where are you going?"
-            icon={<MapIcon className="w-7 h-7 text-primary-600" />}
+          <DateRangeModal
+            selected={selectedDates}
+            setSelected={(dates: Date[]) => setSelectedDates(dates)}
+            className="flex-1 px-5 border-r border-neutral-200"
           />
 
           {/* Guests */}
