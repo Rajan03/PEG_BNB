@@ -1,8 +1,15 @@
 import { HomeData } from "@/constant/data";
-import { AdForStay, Hero, PopularCategories, SearchFilter } from "@/sections";
+import {
+  AdForStay,
+  FeaturedProperties,
+  Hero,
+  PopularCategories,
+  SearchFilter,
+} from "@/sections";
 
 export default function Home(): React.ReactNode {
-  const { heroData, popularShortRentals, adForStay } = HomeData;
+  const { heroData, popularShortRentals, adForStay, featuredProperties } =
+    HomeData;
 
   return (
     <>
@@ -17,6 +24,11 @@ export default function Home(): React.ReactNode {
 
       {/* AD FOR STAY SECTION */}
       <AdForStay {...adForStay} />
+
+      {/* FEATURED PROPERTIES SECTION */}
+      <FeaturedProperties {...featuredProperties} />
+
+      <div className="mt-20"></div>
     </>
   );
 }

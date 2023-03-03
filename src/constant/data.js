@@ -106,10 +106,39 @@ const adForStay = {
   button: "Book a stay",
 };
 
+const featuredProperties = {
+  title: "Featured Properties",
+  subtitle: "Explore our portfolio of short term rentals",
+  properties: [
+    {
+      title: "1 bedroom unit in Oswego near hospital",
+      location: "Oswego, New York, USA",
+      price: 1000,
+      image: HOME01IMG1,
+      rating: 4.5,
+    },
+    {
+      title: "Cheerful 5 bedroom resort with heated Pool",
+      location: "East Stroudsburg, Pennsylvania, USA",
+      price: 1000,
+      image: HOME01IMG1,
+      rating: 4.5,
+    },
+    {
+      title: "Cheerful 5 bedroom resort with heated Pool",
+      location: "East Stroudsburg, Pennsylvania, USA",
+      price: 1000,
+      image: HOME01IMG1,
+      rating: 4.5,
+    },
+  ],
+};
+
 export const HomeData = {
   heroData,
   popularShortRentals,
   adForStay,
+  featuredProperties,
 };
 
 export const LocationsOption = [
