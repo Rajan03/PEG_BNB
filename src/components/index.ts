@@ -4,6 +4,8 @@ import SimpleButton from "./buttons/SimpleButton";
 import { SidebarPortal } from "./Portals";
 import DropDownModal from "./inputs/DropDownModal";
 import { DateRangeModal } from "./inputs/DateRangeModal";
+import SectionHeader from "./headers/SectionHeader";
+import CardWithIcon from "./cards/CardWithIcon";
 
 export {
   Logo,
@@ -12,4 +14,6 @@ export {
   SidebarPortal,
   DropDownModal,
   DateRangeModal,
+  SectionHeader,
+  CardWithIcon,
 };

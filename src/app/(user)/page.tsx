@@ -1,16 +1,19 @@
 import { HomeData } from "@/constant/data";
-import { Hero, SearchFilter } from "@/sections";
+import { Hero, PopularCategories, SearchFilter } from "@/sections";
 
 export default function Home(): React.ReactNode {
-  const { heroData } = HomeData;
+  const { heroData, popularShortRentals } = HomeData;
 
   return (
     <>
       {/* HERO SECTION */}
       <Hero {...heroData} />
 
-      {/* ABOUT SECTION */}
+      {/* SEARCH SECTION */}
       <SearchFilter />
+
+      {/* POPULAR CATEGORIES SECTION */}
+      <PopularCategories {...popularShortRentals} />
     </>
   );
 }

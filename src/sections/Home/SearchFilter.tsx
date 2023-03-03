@@ -1,6 +1,6 @@
 "use client";
 
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import { DateRangeModal, DropDownModal } from "@/components";
 import { GuestsOption, LocationsOption } from "@/constant/data";
 import { MapIcon, UsersIcon } from "@heroicons/react/24/solid";

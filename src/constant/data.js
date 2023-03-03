@@ -1,4 +1,10 @@
 import {
+  BuildingLibraryIcon,
+  BuildingStorefrontIcon,
+  HomeIcon,
+  HomeModernIcon,
+} from "@heroicons/react/24/solid";
+import {
   HOME01IMG1,
   HOME01IMG2,
   HOME01IMG3,
@@ -11,6 +17,13 @@ import {
   HOME03IMG3,
   HOME03IMG4,
 } from "./images";
+
+const ICONS = {
+  cottage: <BuildingLibraryIcon />,
+  home: <HomeIcon />,
+  apartment: <BuildingStorefrontIcon />,
+  villa: <HomeModernIcon />,
+};
 
 export const NavLinks = {
   home: "Home",
@@ -38,6 +51,7 @@ export const NavRoutes = [
   },
 ];
 
+//  HOME PAGE DATA
 const heroData = {
   title: "Find the great places for short term stay",
   subtitle: "Discover the best short term rental properties in the city!",
@@ -57,8 +71,32 @@ const heroData = {
   },
 };
 
+const popularShortRentals = {
+  title: "Popular Short Rentals",
+  subtitle: "Featured short term rentals",
+  categories: [
+    {
+      title: "Entire Apartment",
+      icon: ICONS.apartment,
+    },
+    {
+      title: "Entire House",
+      icon: ICONS.home,
+    },
+    {
+      title: "Entire Villa",
+      icon: ICONS.villa,
+    },
+    {
+      title: "Entire Cottage",
+      icon: ICONS.cottage,
+    },
+  ],
+};
+
 export const HomeData = {
   heroData,
+  popularShortRentals,
 };
 
 export const LocationsOption = [
@@ -126,3 +164,5 @@ export const GuestsOption = [
     value: "5",
   },
 ];
+
+//  ABOUT PAGE DATA
