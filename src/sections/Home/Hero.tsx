@@ -28,6 +28,10 @@ type Props = {
 const Hero: React.FC<Props> = (props: Props) => {
   const { title, subtitle, button, imageLeft, imageRight } = props;
 
+  const bookAStay = () => {
+    throw new Error("Not implemented");
+  }
+
   return (
     <div
       className={
@@ -38,8 +42,8 @@ const Hero: React.FC<Props> = (props: Props) => {
     >
       {/* IMAGE 01 */}
       <motion.div
-        className="hidden lg:block max-w-[24rem] max-h-[39rem] w-[24rem] h-[39rem] rounded-full 
-      relative before:absolute before:inset-0 before:border-2 before:border-primary-600 
+        className="hidden lg:block max-w-[24rem] max-h-[39rem] w-[24rem] h-[39rem] rounded-full
+      relative before:absolute before:inset-0 before:border-2 before:border-primary-600
       before:border-dashed before:rounded-full before:-right-7 before:-bottom-3 before:z-[-1]"
       >
         <Image
@@ -70,15 +74,15 @@ const Hero: React.FC<Props> = (props: Props) => {
         </p>
         <SimpleButton
           action={button}
-          clickHandler={() => console.log("clicked")}
+          clickHandler={bookAStay}
           className={"w-[16rem] h-[5rem] mt-[3rem]"}
         />
       </div>
 
       {/* IMAGES 02 */}
       <div
-        className="block max-w-[25rem] max-h-[39rem] w-[25rem] h-[39rem] rounded-full 
-      relative before:absolute before:inset-0 before:border-2 before:border-primary-600 
+        className="block max-w-[25rem] max-h-[39rem] w-[25rem] h-[39rem] rounded-full
+      relative before:absolute before:inset-0 before:border-2 before:border-primary-600
       before:border-dashed before:rounded-full before:-right-7 before:-bottom-3 before:z-[-1]"
       >
         <Image
