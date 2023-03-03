@@ -1,6 +1,7 @@
 import { HomeData } from "@/constant/data";
 import {
   AdForStay,
+  CustomerReviews,
   FeaturedProperties,
   Hero,
   PopularCategories,
@@ -8,8 +9,13 @@ import {
 } from "@/sections";
 
 export default function Home(): React.ReactNode {
-  const { heroData, popularShortRentals, adForStay, featuredProperties } =
-    HomeData;
+  const {
+    heroData,
+    popularShortRentals,
+    adForStay,
+    featuredProperties,
+    reviews,
+  } = HomeData;
 
   return (
     <>
@@ -28,7 +34,8 @@ export default function Home(): React.ReactNode {
       {/* FEATURED PROPERTIES SECTION */}
       <FeaturedProperties {...featuredProperties} />
 
-      <div className="mt-20"></div>
+      {/* CUSTOMERS REVIEWS */}
+      <CustomerReviews {...reviews} />
     </>
   );
 }

@@ -47,7 +47,7 @@ const PropertyCard = (props: Props) => {
           eb.className
         }
       >
-        <Rating rating={rating} />
+        <Rating rating={rating} showRating />
 
         <h3 className="text-2xl font-semibold mt-7 text-primary-600 truncate">
           {title}

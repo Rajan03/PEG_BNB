@@ -134,11 +134,139 @@ const featuredProperties = {
   ],
 };
 
+const reviews = {
+  title: "What our guests are saying",
+  subtitle: "Read reviews from our guests",
+  reviews: [
+    {
+      name: "John Cena",
+      location: "Auckland, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG1,
+      reviewed: "13 Jan 2023",
+      rating: 4.5,
+    },
+    {
+      name: "John Snow",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+    {
+      name: "Ammy Virk",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+    {
+      name: "Karan Aujla",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+    {
+      name: "Pankaj Tripathi",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+    {
+      name: "John Cena",
+      location: "Auckland, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG1,
+      reviewed: "13 Jan 2023",
+      rating: 4.5,
+    },
+    {
+      name: "John Snow",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+    {
+      name: "Ammy Virk",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+    {
+      name: "Karan Aujla",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+    {
+      name: "Pankaj Tripathi",
+      location: "New York, USA",
+      review:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+      image: HOME02IMG2,
+      reviewed: "2 days ago",
+      rating: 4.5,
+    },
+  ],
+};
+
 export const HomeData = {
   heroData,
   popularShortRentals,
   adForStay,
   featuredProperties,
+  reviews,
 };
 
 export const LocationsOption = [
