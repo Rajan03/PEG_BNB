@@ -13,7 +13,6 @@ export default function Carousel({children, className}: { className?: string, ch
         }
     }, []);
 
-    console.log(width)
     return (
         <motion.div ref={carouselRef} whileTap={{cursor: "grabbing"}}
                     className={"max-w-full cursor-grab overflow-hidden relative " + className}>
@@ -25,7 +24,7 @@ export default function Carousel({children, className}: { className?: string, ch
                 }}
                 dragElastic={0.1}
                 dragMomentum={true}
-                className="flex max-w-max"
+                className="flex min-w-max max-w-max"
             >
                 {children}
             </motion.div>

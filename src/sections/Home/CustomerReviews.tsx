@@ -1,5 +1,5 @@
 import {Rating, SectionHeader} from "@/components";
-import Carousel from "@/components/Caarousel";
+import Carousel from "@/components/Carousel";
 import Image, {StaticImageData} from "next/image";
 
 type Props = {
@@ -24,7 +24,7 @@ const CustomerReviews = (props: Props) => {
             {/* Reviews */}
             <Carousel className={'my-12 py-16 px-8'}>
                 {reviews.map((review, index) => (
-                    <div key={index} className="min-w-[40rem] min-h-[25rem] relative mx-5 pointer-events-none
+                    <div key={index} className="w-[40rem] min-w-[40rem] min-h-[25rem] relative mx-5 pointer-events-none
                      shadow-xl rounded-lg p-7">
                         <div className="min-h-full flex flex-col justify-center items-center pointer-events-none">
                             <div className="flex-1 flex flex-col justify-center items-center pointer-events-none">
