@@ -25,6 +25,7 @@ const ICONS = {
   villa: <HomeModernIcon />,
 };
 
+// NAVIGATION DATA
 export const NavLinks = {
   home: "Home",
   about: "About",
@@ -94,9 +95,21 @@ const popularShortRentals = {
   ],
 };
 
+const adForStay = {
+  title:
+    "Find your perfect rental home with us - Where comfort meets convenience",
+  description:
+    "Our properties are carefully selected and meticulously maintained to ensure that you have a comfortable and hassle-free experience. " +
+    "We offer a wide range of rentals, from studio apartments to large family homes, all equipped with modern amenities to make your stay as " +
+    "comfortable as possible.",
+  image: HOME03IMG4,
+  button: "Book a stay",
+};
+
 export const HomeData = {
   heroData,
   popularShortRentals,
+  adForStay,
 };
 
 export const LocationsOption = [

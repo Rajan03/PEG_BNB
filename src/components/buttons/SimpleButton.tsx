@@ -1,3 +1,5 @@
+"use client";
+
 type Props = {
   action?: string;
   clickHandler: () => void;

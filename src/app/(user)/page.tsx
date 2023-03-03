@@ -1,8 +1,8 @@
 import { HomeData } from "@/constant/data";
-import { Hero, PopularCategories, SearchFilter } from "@/sections";
+import { AdForStay, Hero, PopularCategories, SearchFilter } from "@/sections";
 
 export default function Home(): React.ReactNode {
-  const { heroData, popularShortRentals } = HomeData;
+  const { heroData, popularShortRentals, adForStay } = HomeData;
 
   return (
     <>
@@ -14,6 +14,9 @@ export default function Home(): React.ReactNode {
 
       {/* POPULAR CATEGORIES SECTION */}
       <PopularCategories {...popularShortRentals} />
+
+      {/* AD FOR STAY SECTION */}
+      <AdForStay {...adForStay} />
     </>
   );
 }
