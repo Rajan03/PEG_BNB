@@ -1,31 +1,22 @@
 import {
-	BuildingLibraryIcon,
-	BuildingStorefrontIcon,
-	HomeIcon,
-	HomeModernIcon,
-} from "@heroicons/react/24/solid";
-import {
-	HOME01IMG1,
-	HOME01IMG2,
-	HOME01IMG3,
-	HOME02IMG1,
-	HOME02IMG2,
-	HOME02IMG3,
-	HOME02IMG4,
-	HOME03IMG1,
-	HOME03IMG2,
-	HOME03IMG3,
-	HOME03IMG4,
+	HOME01IMG1, HOME01IMG2, HOME01IMG3,
+	HOME02IMG1, HOME02IMG2, HOME02IMG3, HOME02IMG4,
+	HOME03IMG1, HOME03IMG2, HOME03IMG3, HOME03IMG4
 } from "./images";
+import {HiHome, HiLocationMarker, HiMail, HiPhoneMissedCall} from "react-icons/hi";
+import {HiBuildingLibrary, HiBuildingStorefront, HiHomeModern} from "react-icons/hi2";
 
 const ICONS = {
-	cottage: <BuildingLibraryIcon/>,
-	home: <HomeIcon/>,
-	apartment: <BuildingStorefrontIcon/>,
-	villa: <HomeModernIcon/>,
+	cottage: <HiBuildingLibrary className={'w-12 h-12'}/>,
+	home: <HiHome className={'w-12 h-12'}/>,
+	apartment: <HiBuildingStorefront className={'w-12 h-12'}/>,
+	villa: <HiHomeModern className={'w-12 h-12'}/>,
+	location: <HiLocationMarker className={'w-12 h-12'}/>,
+	mail: <HiMail className={'w-12 h-12'}/>,
+	call: <HiPhoneMissedCall className={'w-12 h-12'}/>,
 };
 
-// NAVIGATION DATA
+//#region NAVIGATION DATA
 export const NavLinks = {
 	home: "Home",
 	about: "About",
@@ -51,8 +42,9 @@ export const NavRoutes = [
 		path: "/book-stay",
 	},
 ];
+//#endregion
 
-//  HOME PAGE DATA
+//#region HOME PAGE DATA
 const heroData = {
 	title: "Find the great places for short term stay",
 	subtitle: "Discover the best short term rental properties in the city!",
@@ -351,8 +343,9 @@ export const GuestsOption = [
 		value: "5",
 	},
 ];
+//#endregion
 
-//  LISTING PAGE DATA
+//#region  LISTING PAGE DATA
 const properties = [
 	{
 		title: "1 bedroom unit in Oswego near hospital",
@@ -403,64 +396,122 @@ const properties = [
 		image: HOME01IMG1,
 		rating: 4.5,
 	},
-	{
-		title: "Cheerful 5 bedroom resort with heated Pool",
-		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "Cheerful 5 bedroom resort with heated Pool",
-		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "1 bedroom unit in Oswego near hospital",
-		location: "Oswego, New York, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "Cheerful 5 bedroom resort with heated Pool",
-		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "Cheerful 5 bedroom resort with heated Pool",
-		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "1 bedroom unit in Oswego near hospital",
-		location: "Oswego, New York, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "Cheerful 5 bedroom resort with heated Pool",
-		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "Cheerful 5 bedroom resort with heated Pool",
-		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
 ];
 
 export const ListingData = {
+	title: "Find your perfect short-term rental",
+	subtitle: "Available Accommodations",
 	properties
 }
+//#endregion
+
+//#region  CONTACT PAGE DATA
+const getInTouch = {
+	title: "Let\'s have a talk together",
+	subtitle: 'Get in touch',
+	description: 'We make property investing easy and stress-free for you. ' +
+		'We take the hassle out of finding and managing property investments, so you can focus on financial security.',
+	action: 'Request a call back',
+}
+
+const contactInfo = {
+	address: {
+		title: 'Address',
+		description: '1234 Street Name, City Name, United States',
+		icon: ICONS.location,
+	},
+	phone: {
+		title: 'Call Us',
+		description: '+1 234 567 890',
+		icon: ICONS.call,
+	},
+	email: {
+		title: 'Email Info',
+		description: 'info@companyname123.com',
+		icon: ICONS.mail,
+	}
+}
+
+const customerReviews = {
+	title: 'Join Us to maximize your revenue',
+	action: 'Contact',
+	reviews: [
+		{
+			name: "John Cena",
+			location: "Auckland, USA",
+			review:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+				"nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+				"nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+				"nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+			image: HOME02IMG1,
+			reviewed: "13 Jan 2023",
+			rating: 4.5,
+		},
+		{
+			name: "Karan Aujla",
+			location: "New York, USA",
+			review:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+				"nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+				"nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+				"nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+			image: HOME02IMG2,
+			reviewed: "2 days ago",
+			rating: 4.5,
+		},
+		{
+			name: "Pankaj Tripathi",
+			location: "New York, USA",
+			review:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+				"nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+				"nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+				"nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+			image: HOME02IMG2,
+			reviewed: "2 days ago",
+			rating: 4.5,
+		},
+		{
+			name: "Ammy Virk",
+			location: "New York, USA",
+			review:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+				"nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+				"nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+				"nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+			image: HOME02IMG2,
+			reviewed: "2 days ago",
+			rating: 4.5,
+		},
+		{
+			name: "Karan Aujla",
+			location: "New York, USA",
+			review:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+				"nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+				"nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+				"nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+			image: HOME02IMG2,
+			reviewed: "2 days ago",
+			rating: 4.5,
+		},
+		{
+			name: "Pankaj Tripathi",
+			location: "New York, USA",
+			review:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
+				"nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
+				"nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
+				"nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+			image: HOME02IMG2,
+			reviewed: "2 days ago",
+			rating: 4.5,
+		},
+	],
+}
+
+export const ContactData = {
+	getInTouch, contactInfo, customerReviews
+}
+//#endregion

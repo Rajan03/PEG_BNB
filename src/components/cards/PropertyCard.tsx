@@ -1,7 +1,7 @@
-import { EB_Garamond } from "@next/font/google";
 import Image, { StaticImageData } from "next/image";
 import { HiHeart } from "react-icons/hi";
 import Rating from "../common/Rating";
+import {EB_Garamond} from "@next/font/google";
 
 type Props = {
   title: string;
@@ -13,7 +13,7 @@ type Props = {
   className?: string;
 };
 
-const eb = EB_Garamond({
+const Font = EB_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -44,7 +44,7 @@ const PropertyCard = (props: Props) => {
       <div
         className={
           "px-5 pb-9 mt-9 flex flex-col justify-between items-center " +
-          eb.className
+            Font.className
         }
       >
         <Rating rating={rating} showRating />

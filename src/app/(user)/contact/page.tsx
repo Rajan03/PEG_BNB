@@ -1,17 +1,21 @@
 import React from "react";
-import Link from "next/link";
-import {PageBanner} from "@/components";
-import {HOME03IMG4} from "@/constant/images";
+import {ContactBanner, ContactInfo, GetInTouch, Reviews} from "@/sections";
+import {ContactData} from "@/constant/data";
 
 export default function Contact(): React.ReactNode {
+    const {getInTouch, contactInfo, customerReviews} = ContactData;
+
     return <>
         {/* Banner Image */}
-        <PageBanner image={HOME03IMG4}>
-            <div className={'flex flex-row justify-center items-center gap-x-2 text-3xl font-normal text-white'}>
-                <Link href={'/'}>Home</Link>
-                <span>/</span>
-                <span> Contact Us</span>
-            </div>
-        </PageBanner>
+        <ContactBanner/>
+
+        {/* Get In Touch */}
+        <GetInTouch {...getInTouch}/>
+
+        {/* Contact Info */}
+        <ContactInfo className={'mt-40'} {...contactInfo}/>
+
+        {/* Customer Reviews */}
+        <Reviews className={'mt-40'} {...customerReviews}/>
     </>;
 }

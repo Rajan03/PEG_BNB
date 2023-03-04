@@ -1,17 +1,20 @@
 import React from "react";
 import {Filters, ListingHeroBanner, SearchFilter} from "@/sections";
 import {ListingData} from "@/constant/data";
-import {PropertyCard} from "@/components";
+import {PropertyCard, SectionHeader} from "@/components";
 
 export default function BookAStay(): React.ReactNode {
-    const {properties} = ListingData
+    const {properties, title, subtitle} = ListingData
     return <>
         {/* Banner Image */}
         <ListingHeroBanner/>
 
         <div className={'flex flex-col justify-start items-stretch container mx-auto'}>
+
+            <SectionHeader title={title} subtitle={subtitle} className={"self-center"} />
+
             {/* Search Filter */}
-            <SearchFilter className={'min-h-[7rem]'}/>
+            <SearchFilter className={'min-h-[7rem] mt-20'}/>
 
             {/* Filters */}
             {/*<Filters />*/}
