@@ -43,7 +43,7 @@ const PropertyCard = (props: Props) => {
       {/* Content */}
       <div
         className={
-          "px-5 pb-9 mt-9 flex flex-col justify-between items-center h-full " +
+          "px-5 pb-9 mt-9 flex flex-col justify-between items-center " +
           eb.className
         }
       >

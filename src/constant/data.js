@@ -352,4 +352,115 @@ export const GuestsOption = [
 	},
 ];
 
-//  ABOUT PAGE DATA
+//  LISTING PAGE DATA
+const properties = [
+	{
+		title: "1 bedroom unit in Oswego near hospital",
+		location: "Oswego, New York, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "1 bedroom unit in Oswego near hospital",
+		location: "Oswego, New York, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "1 bedroom unit in Oswego near hospital",
+		location: "Oswego, New York, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "1 bedroom unit in Oswego near hospital",
+		location: "Oswego, New York, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "1 bedroom unit in Oswego near hospital",
+		location: "Oswego, New York, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+	{
+		title: "Cheerful 5 bedroom resort with heated Pool",
+		location: "East Stroudsburg, Pennsylvania, USA",
+		price: 1000,
+		image: HOME01IMG1,
+		rating: 4.5,
+	},
+];
+
+export const ListingData = {
+	properties
+}
