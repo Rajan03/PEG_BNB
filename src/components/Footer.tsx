@@ -7,7 +7,7 @@ import {NavRoutes} from "@/constant/data";
 export default function Footer() {
 
     return (
-        <footer className="bg-white text-primary-600 min-h-[20rem]">
+        <footer className="bg-white text-primary-600 min-h-[20rem] border-t border-t-primary-50">
             <div className="container mx-auto px-6 py-8">
                 {/* Logo, Social, Navigation and Contact Info */}
                 <div className="flex flex-row justify-between items-start gap-x-16">

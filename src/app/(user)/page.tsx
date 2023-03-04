@@ -26,7 +26,7 @@ export default function Home(): React.ReactNode {
             <Hero {...heroData} />
 
             {/* SEARCH SECTION */}
-            <SearchFilter/>
+            <SearchFilter className={'bg-primary-200'}/>
 
             {/* POPULAR CATEGORIES SECTION */}
             <PopularCategories {...popularShortRentals} />

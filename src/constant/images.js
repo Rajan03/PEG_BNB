@@ -15,7 +15,8 @@ import HOME03IMG4 from "../assets/home03/04.jpg";
 import PLANE from "../assets/icons/Plane.svg";
 import DOTS from "../assets/icons/Dots.svg";
 import HEADER_UNDERLINE from "../assets/icons/header-border.jpg";
-import LOGOJPG from "../assets/logoJpg.jpg";
+import LOGO_JPG from "../assets/logoJpg.jpg";
+import BG_WAVE from "../assets/icons/BgWave.svg";
 
 export {
   HOME01IMG1,
@@ -31,6 +32,7 @@ export {
   HOME03IMG4,
   PLANE,
   DOTS,
-  LOGOJPG,
+  LOGO_JPG,
   HEADER_UNDERLINE,
+  BG_WAVE
 };

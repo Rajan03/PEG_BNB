@@ -1,9 +1,10 @@
 "use client";
 
+import React from "react";
+import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 import { SimpleButton } from "@/components";
 import { DOTS, PLANE } from "@/constant/images";
-import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
 import { linearAnimation } from "@/constant/constant";
 
 type Props = {

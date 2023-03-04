@@ -1,4 +1,4 @@
-import { LOGOJPG } from "@/constant/images";
+import { LOGO_JPG } from "@/constant/images";
 import Image from "next/image";
 
 type Props = {
@@ -30,7 +30,7 @@ export default function Logo(props: Props): JSX.Element {
 
   return (
     <>
-      <Image src={LOGOJPG} alt={"logo"} width={150} height={80} />
+      <Image src={LOGO_JPG} alt={"logo"} width={150} height={80} />
     </>
   );
 }

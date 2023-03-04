@@ -10,6 +10,7 @@ import SectionHeader from "./headers/SectionHeader";
 import CardWithIcon from "./cards/CardWithIcon";
 import PropertyCard from "./cards/PropertyCard";
 import Rating from "./common/Rating";
+import PageBanner from "./common/PageBanner";
 
 export {
   Logo,
@@ -23,5 +24,6 @@ export {
   PropertyCard,
   Rating,
   TextBtn,
-  Footer
+  Footer,
+    PageBanner,
 };

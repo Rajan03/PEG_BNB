@@ -25,7 +25,6 @@ const ListProperty = (props: Props) => {
 
             <div className="absolute w-full h-full bg-primary-700 bg-opacity-50" />
 
-        {/*    TODO : implement list property benefits section */}
             <div className="absolute w-[90%] md:w-[70%] h-full flex flex-col justify-center items-center gap-y-8
             mx-auto py-16">
                 <h1 className="text-5xl text-center font-semibold text-white leading-[3.5rem]

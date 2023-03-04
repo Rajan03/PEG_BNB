@@ -5,7 +5,7 @@ import { DateRangeModal, DropDownModal } from "@/components";
 import { GuestsOption, LocationsOption } from "@/constant/data";
 import { MapIcon, UsersIcon } from "@heroicons/react/24/solid";
 
-export const SearchFilter = () => {
+export const SearchFilter = ({className}: {className?: string}) => {
   const LOptions = LocationsOption;
   const GOptions = GuestsOption;
 
@@ -18,8 +18,9 @@ export const SearchFilter = () => {
 
   return (
     <>
-      <div className="w-full min-h-[25rem] bg-primary-200 flex flex-col justify-center items-center">
-        <div className="container md:w-[70%] mx-auto min-h-[7rem] bg-white shadow-lg rounded-2xl flex justify-start items-start gap-x-5">
+      <div className={"w-full min-h-[25rem] flex flex-col justify-center items-center " + className}>
+        <div className="container md:w-[70%] mx-auto min-h-[7rem] bg-white shadow-lg rounded-2xl flex justify-start items-start gap-x-5
+        border border-gray-50">
           {/* Location Picker */}
           <DropDownModal
             options={LOptions}

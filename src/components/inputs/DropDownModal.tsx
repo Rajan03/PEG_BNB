@@ -1,9 +1,10 @@
 "use client";
 
-import { LabelValue } from "@/types/app";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { useRef, useState } from "react";
-import { Modal } from "../Portals";
+import {useState} from "react";
+import {motion} from "framer-motion";
+import {ChevronDownIcon} from "@heroicons/react/24/solid";
+import {LabelValue} from "@/types/app";
+import {Modal} from "../Portals";
 
 type Props = {
   icon: JSX.Element;
@@ -72,7 +73,8 @@ function ModalBody({
   selected,
 }: BodyProps) {
   return (
-    <div
+    <motion.div initial={{ top: '-100%' }} animate={{ top: 0 }}
+                transition={{type: 'spring', stiffness: 100, duration: 0.3}}
       className="relative min-w-[35rem] min-h-[35rem] max-w-[60rem] max-h-[60rem]
          bg-white shadow-2xl rounded-2xl flex flex-col gap-y-2"
     >
@@ -112,7 +114,7 @@ function ModalBody({
           Done
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
