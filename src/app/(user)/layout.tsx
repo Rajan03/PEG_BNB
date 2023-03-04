@@ -1,7 +1,7 @@
 import React from "react";
 import { Poppins } from "@next/font/google";
 import "@/styles/globals.css";
-import { Navbar } from "@/components";
+import {Footer, Navbar} from "@/components";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,7 +28,8 @@ export default function RootLayout({
           <div className="sidebar" />
           <div className="modal" />
 
-          {/* Footer */}
+          {/* FOOTER SECTION */}
+          <Footer />
         </body>
       </html>
     </>

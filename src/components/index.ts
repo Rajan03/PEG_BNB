@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import SimpleButton from "./buttons/SimpleButton";
 import TextBtn from "./buttons/TextBtn";
 import { SidebarPortal } from "./Portals";
@@ -22,4 +23,5 @@ export {
   PropertyCard,
   Rating,
   TextBtn,
+  Footer
 };

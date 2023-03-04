@@ -7,8 +7,8 @@ import {
     Hero,
     PopularCategories,
     SearchFilter,
+    ListProperty
 } from "@/sections";
-import ListProperty from "../../sections/Home/ListProperty";
 
 export default function Home(): React.ReactNode {
     const {
@@ -42,6 +42,7 @@ export default function Home(): React.ReactNode {
 
             {/* LIST PROPERTY SECTION */}
             <ListProperty {...listMyProperty}/>
+
         </>
     );
 }
