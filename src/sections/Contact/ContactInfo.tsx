@@ -14,7 +14,7 @@ export default function ContactInfo(props: Props): JSX.Element {
 
     return (
         <>
-            <div className={'container mx-auto flex flex-col md:flex-row justify-between items-center ' + className}>
+            <div className={'container mx-auto flex flex-col md:flex-row justify-between items-center gap-y-16 ' + className}>
                 <CardWithIcon title={address.title} icon={address.icon} description={address.description}
                               className={'min-w-[28rem] max-w-[28rem]'}/>
                 <CardWithIcon title={email.title} icon={email.icon} description={email.description}

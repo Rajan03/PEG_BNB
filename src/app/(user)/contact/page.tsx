@@ -1,5 +1,5 @@
 import React from "react";
-import {ContactBanner, ContactInfo, GetInTouch, Reviews} from "@/sections";
+import {ContactBanner, ContactInfo, GetInTouch, ContactForm, Reviews} from "@/sections";
 import {ContactData} from "@/constant/data";
 
 export default function Contact(): React.ReactNode {
@@ -17,5 +17,8 @@ export default function Contact(): React.ReactNode {
 
         {/* Customer Reviews */}
         <Reviews className={'mt-40'} {...customerReviews}/>
+
+        {/* Contact Form */}
+        <ContactForm className={'mt-40 mb-24'} />
     </>;
 }

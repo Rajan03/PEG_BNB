@@ -28,7 +28,8 @@ export function CustomerReviews(props: Props): JSX.Element {
         <>
             <div className={'w-screen h-[60rem] flex flex-row justify-start items-stretch bg-neutral-900 ' + className}>
                 {/* Reviews */}
-                <div className={'flex-[60%] max-w-[60%] flex flex-col justify-center items-center relative'}>
+                <div className={'max-w-full md:flex-[60%] md:max-w-[60%] flex flex-col justify-center items-center' +
+                    ' relative'}>
                     <Carousel className={'px-32'}>
                         {reviews.map((review, index) => (
                             <div key={index} className={'max-w-[50rem] w-[50rem] min-w-[50rem] flex flex-col' +
@@ -41,7 +42,7 @@ export function CustomerReviews(props: Props): JSX.Element {
                 </div>
 
                 {/* Action */}
-                <div className={'flex-[40%] max-w-[40%] relative flex flex-col justify-center items-center'}>
+                <div className={'hidden flex-[40%] max-w-[40%] relative md:flex flex-col justify-center items-center'}>
                     <Image src={HOME03IMG3} alt={'img'} fill className={'absolute inset-0 w-full h-full object-cover'}/>
                     <div className={'absolute inset-0 bg-neutral-900 bg-opacity-50'}/>
 

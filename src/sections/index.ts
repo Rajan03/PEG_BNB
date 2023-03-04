@@ -10,6 +10,7 @@ import HeroBanner from "./Listing/Hero";
 import {HeroBanner as ContactBanner} from "./Contact/HeroBanner";
 import GetInTouch from "./Contact/GetInTouch";
 import ContactInfo from "./Contact/ContactInfo";
+import ContactForm from "./Contact/ContactForm";
 import Filters from "./Listing/Filters";
 
 export {
@@ -25,5 +26,6 @@ export {
     ContactBanner,
     GetInTouch,
     ContactInfo,
-    Reviews
+    Reviews,
+    ContactForm,
 };
