@@ -32,51 +32,49 @@ export default function PropertyPage(props: Props): JSX.Element {
       </div>
 
       {/* Content */}
-      <div className={"container mx-auto"}>
+      <div
+        className={"container mx-auto grid grid-cols-[1fr_30%] gap-20 mt-12"}
+      >
         {/* ROW 1 - NAME and PRICE card */}
-        <div className={"grid grid-cols-[1fr_30%] gap-20"}>
-          {/* Title Location Card */}
-          <div
-            className={
-              "col-span-1 flex flex-col gap-y-3 p-8 rounded-lg border border-gray-200"
-            }
+        {/* Title Location Card */}
+        <div
+          className={
+            "col-span-1 flex flex-col gap-y-3 p-8 rounded-lg border border-gray-200"
+          }
+        >
+          <h1
+            className={"text-4xl tracking-wider text-primary-600 font-medium"}
           >
-            <h1
-              className={"text-4xl tracking-wider text-primary-600 font-medium"}
-            >
-              {property.title}
-            </h1>
-            <p className={"text-xl text-gray-500"}>{property.location}</p>
+            {property.title}
+          </h1>
+          <p className={"text-xl text-gray-500"}>{property.location}</p>
 
-            <div className={"flex items-center gap-x-32 mt-4"}>
-              {property.topFeatures.map((feature) => (
-                <div key={feature.name} className={"flex items-center"}>
-                  <div className={"w-6 h-6 text-primary-600"}>
-                    {feature.icon}
-                  </div>
-                  <p className={"ml-2 text-primary-500 text-lg "}>
-                    {feature.name}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Price Card */}
-          <div className={"col-span-1 p-8 rounded border border-gray-200"}>
-            <div className={"flex justify-end"}>
-              <div className={"flex flex-col"}>
-                <p className={"text-primary-500"}>Price</p>
-                <p className={"text-2xl text-primary-500 font-bold"}>
-                  {property.price}
+          <div className={"flex items-center gap-x-32 mt-4"}>
+            {property.topFeatures.map((feature) => (
+              <div key={feature.name} className={"flex items-center"}>
+                <div className={"w-6 h-6 text-primary-600"}>{feature.icon}</div>
+                <p className={"ml-2 text-primary-500 text-lg "}>
+                  {feature.name}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Price Card */}
+        <div className={"col-span-1 p-8 rounded border border-gray-200"}>
+          <div className={"flex justify-end"}>
+            <div className={"flex flex-col"}>
+              <p className={"text-primary-500"}>Price</p>
+              <p className={"text-2xl text-primary-500 font-bold"}>
+                {property.price}
+              </p>
             </div>
           </div>
         </div>
 
         {/* ROW 2 - OVERVIEW */}
-        <div className={"mt-20 p-8 rounded-lg border border-gray-200"}>
+        <div className={"col-span-1 p-8 rounded-lg border border-gray-200"}>
           <h1
             className={"text-3xl tracking-wider text-primary-600 font-medium"}
           >

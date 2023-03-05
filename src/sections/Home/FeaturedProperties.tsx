@@ -7,7 +7,9 @@ type Props = {
   subtitle: string;
 
   properties: {
+    id: number;
     title: string;
+    slug: string;
     location: string;
     image: StaticImageData;
     rating: number;

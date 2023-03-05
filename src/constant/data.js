@@ -156,6 +156,8 @@ const featuredProperties = {
   subtitle: "Explore our portfolio of short term rentals",
   properties: [
     {
+      id: 1,
+      slug: "1-bedroom-unit-in-oswego-near-hospital",
       title: "1 bedroom unit in Oswego near hospital",
       location: "Oswego, New York, USA",
       price: 1000,
@@ -163,6 +165,8 @@ const featuredProperties = {
       rating: 4.5,
     },
     {
+      id: 2,
+      slug: "2-bedroom-apartment-in-los-angeles",
       title: "Cheerful 5 bedroom resort with heated Pool",
       location: "East Stroudsburg, Pennsylvania, USA",
       price: 1000,
@@ -170,6 +174,8 @@ const featuredProperties = {
       rating: 4.5,
     },
     {
+      id: 3,
+      slug: "3-bedroom-apartment-in-los-angeles",
       title: "Cheerful 5 bedroom resort with heated Pool",
       location: "East Stroudsburg, Pennsylvania, USA",
       price: 1000,
@@ -323,6 +329,7 @@ const listMyProperty = {
     "Optimize your listing",
   ],
 };
+
 export const HomeData = {
   heroData,
   popularShortRentals,
