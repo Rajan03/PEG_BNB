@@ -33,6 +33,7 @@ export default function PropertyPage(props: Props): JSX.Element {
 
       {/* Content */}
       <div className={"container mx-auto"}>
+        {/* ROW 1 - NAME and PRICE card */}
         <div className={"grid grid-cols-[1fr_30%] gap-20"}>
           {/* Title Location Card */}
           <div
@@ -40,18 +41,20 @@ export default function PropertyPage(props: Props): JSX.Element {
               "col-span-1 flex flex-col gap-y-3 p-8 rounded-lg border border-gray-200"
             }
           >
-            <h1 className={"text-4xl text-primary-600 font-medium"}>
+            <h1
+              className={"text-4xl tracking-wider text-primary-600 font-medium"}
+            >
               {property.title}
             </h1>
             <p className={"text-xl text-gray-500"}>{property.location}</p>
 
-            <div className={"flex items-center gap-x-32"}>
+            <div className={"flex items-center gap-x-32 mt-4"}>
               {property.topFeatures.map((feature) => (
                 <div key={feature.name} className={"flex items-center"}>
-                  <div className={"w-4 h-4 text-primary-600"}>
+                  <div className={"w-6 h-6 text-primary-600"}>
                     {feature.icon}
                   </div>
-                  <p className={"ml-2 text-primary-500 text-xl "}>
+                  <p className={"ml-2 text-primary-500 text-lg "}>
                     {feature.name}
                   </p>
                 </div>
@@ -70,6 +73,18 @@ export default function PropertyPage(props: Props): JSX.Element {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* ROW 2 - OVERVIEW */}
+        <div className={"mt-20 p-8 rounded-lg border border-gray-200"}>
+          <h1
+            className={"text-3xl tracking-wider text-primary-600 font-medium"}
+          >
+            Overview
+          </h1>
+          <p className={"text-lg tracking-widest text-gray-500 mt-4"}>
+            {property.overview}
+          </p>
         </div>
       </div>
     </div>
