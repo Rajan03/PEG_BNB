@@ -1,4 +1,6 @@
-import {SectionHeader} from "@/components";
+'use client';
+
+import {SectionHeader, SimpleButton} from "@/components";
 
 type Props = {
     className?: string;
@@ -34,6 +36,9 @@ export default function ContactForm({className}: Props): JSX.Element {
                             ' shadow-sm text-2xl tracking-widest leading-[3rem] border border-neutral-300 rounded-lg' +
                             ' focus:outline-none focus:border-neutral-500'} />
                     </div>
+
+                    <SimpleButton clickHandler={() => console.log('clicked')} className={'mt-16 py-5 px-8' +
+                        ' text-2xl tracking-widest leading-[3rem] self-stretch'} action={'Send Message'} />
                 </form>
             </div>
         </>

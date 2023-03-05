@@ -5,15 +5,21 @@ import {
 } from "./images";
 import {HiHome, HiLocationMarker, HiMail, HiPhoneMissedCall} from "react-icons/hi";
 import {HiBuildingLibrary, HiBuildingStorefront, HiHomeModern} from "react-icons/hi2";
+import {BsMap} from "react-icons/bs";
+import {RiChatSmile3Line} from "react-icons/ri";
+import {GiModernCity} from "react-icons/gi";
 
 const ICONS = {
-	cottage: <HiBuildingLibrary className={'w-12 h-12'}/>,
-	home: <HiHome className={'w-12 h-12'}/>,
-	apartment: <HiBuildingStorefront className={'w-12 h-12'}/>,
-	villa: <HiHomeModern className={'w-12 h-12'}/>,
-	location: <HiLocationMarker className={'w-12 h-12'}/>,
-	mail: <HiMail className={'w-12 h-12'}/>,
-	call: <HiPhoneMissedCall className={'w-12 h-12'}/>,
+	cottage: <HiBuildingLibrary className={'w-full h-full min-w-12 min-h-12'}/>,
+	home: <HiHome className={'w-full h-full min-w-12 min-h-12'}/>,
+	apartment: <HiBuildingStorefront className={'w-full h-full min-w-12 min-h-12'}/>,
+	villa: <HiHomeModern className={'w-full h-full min-w-12 min-h-12'}/>,
+	location: <HiLocationMarker className={'w-full h-full min-w-12 min-h-12'}/>,
+	mail: <HiMail className={'w-full h-full min-w-12 min-h-12'}/>,
+	call: <HiPhoneMissedCall className={'w-full h-full min-w-12 min-h-12'}/>,
+	smile: <RiChatSmile3Line className={'w-full h-full min-w-12 min-h-12'}/>,
+	city: <GiModernCity className={'w-full h-full min-w-12 min-h-12'}/>,
+	map: <BsMap className={'w-full h-full min-w-12 min-h-12'}/>,
 };
 
 //#region NAVIGATION DATA
@@ -515,3 +521,40 @@ export const ContactData = {
 	getInTouch, contactInfo, customerReviews
 }
 //#endregion
+
+//#region  ABOUT PAGE DATA
+const welcomeSection = {
+	title: 'Expert Property Management: Your Key to Success',
+	subtitle: 'Welcome to PEGBnb',
+	description: 'At PEG, we make property investing easy and stress-free for you.  We take the hassle out of finding and ' +
+		'managing property investments, so you can focus on financial security.',
+	action: 'Request a call back',
+}
+
+const stats = [
+	{
+		title: 'Listed Properties',
+		value: 200,
+		icon: ICONS.villa,
+	},
+	{
+		title: 'Happy Customers',
+		value: 100,
+		icon: ICONS.smile,
+	},
+	{
+		title: 'Cities with active Listings',
+		value: 10,
+		icon: ICONS.city,
+	},
+	{
+		title: 'Beautiful Locations',
+		value: 5,
+		icon: ICONS.map,
+	}
+]
+export const AboutData = {
+	welcomeSection,
+	stats,
+	customerReviews
+}

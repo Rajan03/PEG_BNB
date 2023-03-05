@@ -30,7 +30,7 @@ const SectionHeader = (props: Props) => {
       <Image
         src={HEADER_UNDERLINE}
         alt="underline"
-        className={"w-full mt-4 object-cover"}
+        className={"w-full mt-4 object-cover max-w-[45rem]"}
       />
     </div>
   );

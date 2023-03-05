@@ -12,6 +12,9 @@ import GetInTouch from "./Contact/GetInTouch";
 import ContactInfo from "./Contact/ContactInfo";
 import ContactForm from "./Contact/ContactForm";
 import Filters from "./Listing/Filters";
+import {AboutBanner} from "./About/AboutBanner";
+import WelcomeSection from "./About/WelcomeSection";
+import Stats from "./About/Stats";
 
 export {
     Hero,
@@ -28,4 +31,7 @@ export {
     ContactInfo,
     Reviews,
     ContactForm,
+    AboutBanner,
+    WelcomeSection,
+    Stats
 };
