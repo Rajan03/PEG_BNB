@@ -25,5 +25,5 @@ export {
   Rating,
   TextBtn,
   Footer,
-    PageBanner,
+  PageBanner,
 };
