@@ -23,29 +23,36 @@ const ICONS = {
 };
 
 //#region NAVIGATION DATA
-export const NavLinks = {
+export const NavLinkNames = {
 	home: "Home",
 	about: "About",
 	contact: "Contact",
 	bookStay: "Book a Stay",
 };
 
+export const NavLinks = {
+	home: "/",
+	about: "/about",
+	contact: "/contact",
+	bookStay: "/book-stay",
+};
+
 export const NavRoutes = [
 	{
-		name: NavLinks.home,
-		path: "/",
+		name: NavLinkNames.home,
+		path: NavLinks.home,
 	},
 	{
-		name: NavLinks.about,
-		path: "/about",
+		name: NavLinkNames.about,
+		path: NavLinks.about,
 	},
 	{
-		name: NavLinks.contact,
-		path: "/contact",
+		name: NavLinkNames.contact,
+		path: NavLinks.contact,
 	},
 	{
-		name: NavLinks.bookStay,
-		path: "/book-stay",
+		name: NavLinkNames.bookStay,
+		path: NavLinks.bookStay,
 	},
 ];
 //#endregion
@@ -352,52 +359,48 @@ export const GuestsOption = [
 //#endregion
 
 //#region  LISTING PAGE DATA
-const properties = [
+export const properties = [
 	{
+		id: 1,
 		title: "1 bedroom unit in Oswego near hospital",
+		slug: "1-bedroom-unit-in-oswego-near-hospital",
 		location: "Oswego, New York, USA",
 		price: 1000,
 		image: HOME01IMG1,
 		rating: 4.5,
 	},
 	{
+		id: 2,
 		title: "Cheerful 5 bedroom resort with heated Pool",
+		slug: "cheerful-5-bedroom-resort-with-heated-pool",
 		location: "East Stroudsburg, Pennsylvania, USA",
 		price: 1000,
 		image: HOME01IMG1,
 		rating: 4.5,
 	},
 	{
+		id: 3,
 		title: "Cheerful 5 bedroom resort with heated Pool",
+		slug: "cheerful-5-bedroom-resort-with-heated-pool",
 		location: "East Stroudsburg, Pennsylvania, USA",
 		price: 1000,
 		image: HOME01IMG1,
 		rating: 4.5,
 	},
 	{
+		id: 4,
 		title: "1 bedroom unit in Oswego near hospital",
+		slug: "1-bedroom-unit-in-oswego-near-hospital",
 		location: "Oswego, New York, USA",
 		price: 1000,
 		image: HOME01IMG1,
 		rating: 4.5,
 	},
 	{
+		id: 5,
 		title: "Cheerful 5 bedroom resort with heated Pool",
+		slug: "cheerful-5-bedroom-resort-with-heated-pool",
 		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "Cheerful 5 bedroom resort with heated Pool",
-		location: "East Stroudsburg, Pennsylvania, USA",
-		price: 1000,
-		image: HOME01IMG1,
-		rating: 4.5,
-	},
-	{
-		title: "1 bedroom unit in Oswego near hospital",
-		location: "Oswego, New York, USA",
 		price: 1000,
 		image: HOME01IMG1,
 		rating: 4.5,
@@ -558,3 +561,4 @@ export const AboutData = {
 	stats,
 	customerReviews
 }
+//#endregion
