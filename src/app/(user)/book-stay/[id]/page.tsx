@@ -81,7 +81,12 @@ export default function PropertyPage(props: Props): JSX.Element {
             Overview
           </h1>
           <p className={"text-lg tracking-widest text-gray-500 mt-4"}>
-            {property.overview}
+            {property.overview.split('\n').map((line, index) => (
+                <span key={index}>
+                    {line}
+                    <br />
+                </span>
+            ))}
           </p>
         </div>
       </div>
