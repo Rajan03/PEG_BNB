@@ -190,122 +190,30 @@ const reviews = {
   subtitle: "Read reviews from our guests",
   reviews: [
     {
+      id: 1,
+      date: "13 Jan 2023",
       name: "John Cena",
       location: "Auckland, USA",
-      review:
+      comment:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
         "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
         "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
         "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG1,
+      avatar: HOME02IMG1,
       reviewed: "13 Jan 2023",
       rating: 4.5,
     },
     {
+      id: 2,
+      date: "2 days ago",
       name: "John Snow",
       location: "New York, USA",
-      review:
+      comment:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
         "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
         "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
         "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Ammy Virk",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Karan Aujla",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Pankaj Tripathi",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "John Cena",
-      location: "Auckland, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG1,
-      reviewed: "13 Jan 2023",
-      rating: 4.5,
-    },
-    {
-      name: "John Snow",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Ammy Virk",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Karan Aujla",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Pankaj Tripathi",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
+      avatar: HOME02IMG2,
       reviewed: "2 days ago",
       rating: 4.5,
     },
@@ -659,6 +567,46 @@ export const propertiesDetailsArr = [
         name: "Free Parking",
         icon: ICONS.freeParking,
       },
+      {
+        name: "Air Conditioning",
+        icon: ICONS.airConditioner,
+      },
+      {
+        name: "Balcony",
+        icon: ICONS.balcony,
+      },
+      {
+        name: "3 Beds",
+        icon: ICONS.bedding,
+      },
+      {
+        name: "Cable TV",
+        icon: ICONS.cableTV,
+      },
+      {
+        name: "Dishwasher",
+        icon: ICONS.dishwasher,
+      },
+      {
+        name: "Dryer",
+        icon: ICONS.dryer,
+      },
+      {
+        name: "Free Parking",
+        icon: ICONS.freeParking,
+      },
+      {
+        name: "Dishwasher",
+        icon: ICONS.dishwasher,
+      },
+      {
+        name: "Dryer",
+        icon: ICONS.dryer,
+      },
+      {
+        name: "Free Parking",
+        icon: ICONS.freeParking,
+      },
     ],
     topFeatures: [
       {
@@ -680,7 +628,19 @@ export const propertiesDetailsArr = [
     ],
     overview: dataStr,
     price: 1000,
-    images: [HOME01IMG1, HOME01IMG2, HOME01IMG3, HOME02IMG3, HOME02IMG4],
+    images: [
+      HOME01IMG1,
+      HOME01IMG2,
+      HOME01IMG3,
+      HOME02IMG1,
+      HOME02IMG2,
+      HOME02IMG3,
+      HOME02IMG4,
+      HOME03IMG1,
+      HOME03IMG2,
+      HOME03IMG3,
+      HOME03IMG4,
+    ],
     rating: 4.5,
     reviews: [
       {

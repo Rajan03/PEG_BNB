@@ -1,9 +1,18 @@
+"use client";
+
 import { propertiesDetailsArr } from "@/constant/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { EB_Garamond } from "@next/font/google";
+
 import Carousel from "@/components/Carousel";
 import { Property } from "@/types/app";
+import { DateInput, Rating, ReviewCard, SimpleButton } from "@/components";
 
+const Font = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 type Props = {
   params: {
     id: string;
@@ -15,6 +24,9 @@ const getProperty = (id: string) => {
 };
 export default function PropertyPage(props: Props): JSX.Element {
   const property: Property = getProperty(props.params.id);
+  const avgRating = property.reviews.reduce((acc, review) => {
+    return acc + review.rating;
+  }, 0);
 
   if (!property) {
     return notFound();
@@ -39,12 +51,11 @@ export default function PropertyPage(props: Props): JSX.Element {
         {/* Title Location Card */}
         <div
           className={
-            "col-span-1 flex flex-col gap-y-3 p-8 rounded-lg border border-gray-200"
+            "col-span-1 flex flex-col gap-y-3 p-8 rounded-lg border border-gray-200 " +
+            Font.className
           }
         >
-          <h1
-            className={"text-4xl tracking-wider text-primary-600 font-medium"}
-          >
+          <h1 className={"text-4xl tracking-wider text-primary-600 font-bold"}>
             {property.title}
           </h1>
           <p className={"text-xl text-gray-500"}>{property.location}</p>
@@ -53,7 +64,7 @@ export default function PropertyPage(props: Props): JSX.Element {
             {property.topFeatures.map((feature) => (
               <div key={feature.name} className={"flex items-center"}>
                 <div className={"w-6 h-6 text-primary-600"}>{feature.icon}</div>
-                <p className={"ml-2 text-primary-500 text-lg "}>
+                <p className={"ml-2 text-primary-500 text-xl "}>
                   {feature.name}
                 </p>
               </div>
@@ -63,31 +74,132 @@ export default function PropertyPage(props: Props): JSX.Element {
 
         {/* Price Card */}
         <div className={"col-span-1 p-8 rounded border border-gray-200"}>
-          <div className={"flex justify-end"}>
-            <div className={"flex flex-col"}>
-              <p className={"text-primary-500"}>Price</p>
-              <p className={"text-2xl text-primary-500 font-bold"}>
-                {property.price}
-              </p>
-            </div>
+          <div className={"flex flex-col " + Font.className}>
+            <p className={"text-primary-500 text-lg"}>Price</p>
+            <p className={"text-4xl text-primary-500 font-bold"}>
+              {property.price} / night
+            </p>
           </div>
+
+          <div className={"flex items-center gap-x-4 mt-7"}>
+            <DateInput />
+          </div>
+
+          <SimpleButton
+            className={"w-full mt-7"}
+            clickHandler={() => console.log("Hello")}
+          >
+            Book Now
+          </SimpleButton>
         </div>
 
         {/* ROW 2 - OVERVIEW */}
         <div className={"col-span-1 p-8 rounded-lg border border-gray-200"}>
-          <h1
-            className={"text-3xl tracking-wider text-primary-600 font-medium"}
+          <h2
+            className={
+              "text-3xl tracking-wider text-primary-600 font-bold " +
+              Font.className
+            }
           >
             Overview
-          </h1>
+          </h2>
           <p className={"text-lg tracking-widest text-gray-500 mt-4"}>
-            {property.overview.split('\n').map((line, index) => (
-                <span key={index}>
-                    {line}
-                    <br />
-                </span>
+            {property.overview.split("\n").map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
             ))}
           </p>
+        </div>
+
+        {/* ROW 3 - AMENITIES */}
+        <div className={"col-span-1 p-8 rounded-lg border border-gray-200"}>
+          <h2
+            className={
+              "text-3xl tracking-wider text-primary-600 font-bold " +
+              Font.className
+            }
+          >
+            Amenities
+          </h2>
+          <div className={"grid grid-cols-2 gap-y-6 mt-4"}>
+            {property.amenities.map((amenity, i) =>
+              i < 15 ? (
+                <div
+                  key={amenity.name}
+                  className={"col-span-1 flex items-center gap-x-2 mt-4"}
+                >
+                  <div className={"w-6 h-6 text-primary-600"}>
+                    {amenity.icon}
+                  </div>
+                  <p className={"text-lg text-gray-500"}>{amenity.name}</p>
+                </div>
+              ) : null
+            )}
+
+            {property.amenities.length > 15 && (
+              <div className={"col-span-2 flex justify-center mt-4"}>
+                <button className={"btn btn-primary"}>
+                  Show More Amenities
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* ROW 4 - REVIEWS */}
+        <div className={"col-span-2 p-8 rounded-lg border border-gray-200"}>
+          <div className={"flex items-center gap-x-4 mt-4"}>
+            <h2
+              className={
+                "text-3xl tracking-wider text-primary-600 font-bold " +
+                Font.className
+              }
+            >
+              Reviews
+            </h2>
+            <div className={"flex items-center gap-x-2"}>
+              <Rating rating={avgRating / property.reviews.length} />
+              <p className={"text-lg text-gray-500"}>
+                {property.reviews.length} Reviews
+              </p>
+            </div>
+          </div>
+
+          <Carousel className={"my-4 py-8 px-3"}>
+            {property.reviews.map((review, index) => (
+              <ReviewCard key={index} {...review} />
+            ))}
+          </Carousel>
+        </div>
+
+        {/* ROW 5 - GALLERY */}
+        <div className={"col-span-2 p-8 rounded-lg border border-gray-200"}>
+          <h2
+            className={
+              "text-3xl tracking-wider text-primary-600 font-bold " +
+              Font.className
+            }
+          >
+            Gallery
+          </h2>
+          <Carousel className={"my-4 py-8 px-3"}>
+            {property.images.map((image, i) => (
+              <div
+                key={i}
+                className={
+                  "w-full h-[30rem] rounded-xl pointer-events-none mr-8"
+                }
+              >
+                <Image
+                  src={image}
+                  alt={property.title}
+                  className={"w-full h-full rounded-xl shadow-lg object-cover"}
+                />
+              </div>
+            ))}
+          </Carousel>
         </div>
       </div>
     </div>
