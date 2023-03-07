@@ -4,6 +4,8 @@ import { FC, useEffect, useState } from "react";
 import { useCycle, motion } from "framer-motion";
 import { Bars3CenterLeftIcon, XCircleIcon } from "@heroicons/react/24/solid";
 import { SidebarPortal } from "./Portals";
+import { NavRoutes } from "@/constant/data";
+import Link from "next/link";
 
 const animationVariants = {
   open: {
@@ -55,6 +57,17 @@ const MenuToggle: FC<{
 const NavSidebar: FC = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
+  const onMenuToggle = () => {
+    if (!isOpen) {
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
+      document.getElementsByTagName("body")[0].style.maxHeight = "100vh";
+    } else {
+      document.getElementsByTagName("body")[0].style.overflow = "auto";
+      document.getElementsByTagName("body")[0].style.maxHeight = "100%";
+    }
+
+    toggleOpen();
+  };
   return (
     <>
       <motion.div
@@ -65,11 +78,23 @@ const NavSidebar: FC = () => {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         exit={isOpen ? "closed" : "open"}
-      ></motion.div>
+      >
+        <div className="flex flex-col justify-center items-center gap-16 h-screen overflow-hidden">
+          {NavRoutes.map((route) => (
+            <Link
+              href={route.path}
+              key={route.name}
+              className="text-2xl font-bold text-primary-600"
+            >
+              {route.name}
+            </Link>
+          ))}
+        </div>
+      </motion.div>
 
       <div className="md:hidden fixed top-0 right-0 h-[8rem] flex flex-col justify-center items-center pr-9 z-[52]">
         <MenuToggle
-          toggle={() => toggleOpen()}
+          toggle={() => onMenuToggle()}
           styleClass={"text-primary-600"}
           open={isOpen}
         />
