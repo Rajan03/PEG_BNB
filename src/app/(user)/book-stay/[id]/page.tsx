@@ -45,13 +45,15 @@ export default function PropertyPage(props: Props): JSX.Element {
 
       {/* Content */}
       <div
-        className={"container mx-auto grid grid-cols-[1fr_30%] gap-20 mt-12"}
+        className={
+          "container mx-auto grid grid-cols-1 md:grid-cols-[1fr_30%] gap-20 mt-12"
+        }
       >
         {/* ROW 1 - NAME and PRICE card */}
         {/* Title Location Card */}
         <div
           className={
-            "col-span-1 flex flex-col gap-y-3 p-8 rounded-lg border border-gray-200 " +
+            "md:col-span-1 flex flex-col gap-y-3 p-8 rounded-lg border border-gray-200 " +
             Font.className
           }
         >
@@ -60,7 +62,7 @@ export default function PropertyPage(props: Props): JSX.Element {
           </h1>
           <p className={"text-xl text-gray-500"}>{property.location}</p>
 
-          <div className={"flex items-center gap-x-32 mt-4"}>
+          <div className={"flex items-center gap-x-24 mt-4"}>
             {property.topFeatures.map((feature) => (
               <div key={feature.name} className={"flex items-center"}>
                 <div className={"w-6 h-6 text-primary-600"}>{feature.icon}</div>
@@ -73,7 +75,7 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* Price Card */}
-        <div className={"col-span-1 p-8 rounded border border-gray-200"}>
+        <div className={"md:col-span-1 p-8 rounded border border-gray-200"}>
           <div className={"flex flex-col " + Font.className}>
             <p className={"text-primary-500 text-lg"}>Price</p>
             <p className={"text-4xl text-primary-500 font-bold"}>
@@ -94,7 +96,7 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* ROW 2 - OVERVIEW */}
-        <div className={"col-span-1 p-8 rounded-lg border border-gray-200"}>
+        <div className={"md:col-span-1 p-8 rounded-lg border border-gray-200"}>
           <h2
             className={
               "text-3xl tracking-wider text-primary-600 font-bold " +
@@ -114,7 +116,7 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* ROW 3 - AMENITIES */}
-        <div className={"col-span-1 p-8 rounded-lg border border-gray-200"}>
+        <div className={"md:col-span-1 p-8 rounded-lg border border-gray-200"}>
           <h2
             className={
               "text-3xl tracking-wider text-primary-600 font-bold " +
@@ -149,7 +151,7 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* ROW 4 - REVIEWS */}
-        <div className={"col-span-2 p-8 rounded-lg border border-gray-200"}>
+        <div className={"md:col-span-2 p-8 rounded-lg border border-gray-200"}>
           <div className={"flex items-center gap-x-4 mt-4"}>
             <h2
               className={
@@ -175,7 +177,7 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* ROW 5 - GALLERY */}
-        <div className={"col-span-2 p-8 rounded-lg border border-gray-200"}>
+        <div className={"md:col-span-2 p-8 rounded-lg border border-gray-200"}>
           <h2
             className={
               "text-3xl tracking-wider text-primary-600 font-bold " +
