@@ -1,43 +1,43 @@
 "use client";
 
-import React, { forwardRef, useState } from "react";
-import DatePicker from "react-datepicker";
-import { HiCalendar } from "react-icons/hi";
+import React, { useState } from "react";
+import { DateRangePicker, RangeKeyDict } from "react-date-range";
 
 export default function DateInput(): JSX.Element {
-  const [startDate, setStartDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState<{
+    startDate: Date;
+    endDate: Date;
+    key: string;
+  }>({
+    startDate: new Date(),
+    endDate: new Date(),
+    key: "selection",
+  });
 
-  const MenuOpener = forwardRef<HTMLButtonElement>((props: any, ref) => (
-    <button
-      className={
-        "outline-none border border-neutral-300 bg-neutral-50 w-full p-4 rounded-lg flex items-center justify-start"
-      }
-      ref={ref}
-      onClick={props.onClick}
-    >
-      <HiCalendar className={"inline-block mr-2 h-8 w-8 text-primary-600"} />
-      <span className="text-lg text-primary-600 text-left">
-        {startDate.toDateString()}
-      </span>
-    </button>
-  ));
-  MenuOpener.displayName = "ExampleCustomInput";
-
-  const onChange = (dates: Date | null) => {
+  const onChange = (dates: RangeKeyDict) => {
     if (dates === null) {
-      setStartDate(new Date());
+      setSelectedDate({
+        startDate: new Date(),
+        endDate: new Date(),
+        key: "selection",
+      });
       return;
     }
-
-    setStartDate(dates);
+    const { selection } = dates;
+    setSelectedDate({
+      startDate: selection.startDate || new Date(),
+      endDate: selection.endDate || new Date(),
+      key: "selection",
+    });
   };
 
   return (
     <>
-      <DatePicker
-        selected={startDate}
-        onChange={(date) => onChange(date)}
-        customInput={<MenuOpener />}
+      <DateRangePicker
+        ranges={[selectedDate]}
+        onChange={onChange}
+        direction="horizontal"
+        color={"#e2a69a"}
       />
     </>
   );

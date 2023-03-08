@@ -75,7 +75,7 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* Price Card */}
-        <div className={"md:col-span-1 p-8 rounded border border-gray-200"}>
+        <div className={"md:col-span-1 md:row-span-2 p-8 rounded border border-gray-200"}>
           <div className={"flex flex-col " + Font.className}>
             <p className={"text-primary-500 text-lg"}>Price</p>
             <p className={"text-4xl text-primary-500 font-bold"}>
