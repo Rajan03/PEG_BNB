@@ -53,7 +53,6 @@ const MenuToggle: FC<{
   );
 };
 
-// TODO: IMPLEMENT ROUTES
 const NavSidebar: FC = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 

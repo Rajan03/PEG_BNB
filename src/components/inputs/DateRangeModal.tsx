@@ -14,42 +14,50 @@ type Props = {
 };
 
 export const DateRangeModal = ({ selected, setSelected, className }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   const onChange = (dates: [Date | null, Date | null]) => {
     const [start, end] = dates;
 
+    console.log(dates);
     if (start && end) {
       setSelected([start, end]);
     }
-
-    setIsOpen(false);
   };
+
+  const MenuOpener = forwardRef<HTMLButtonElement>((props: any, ref) => (
+    <button
+      className={
+        "min-h-full w-full flex items-center justify-between outline-none focus:outline-none " +
+        className
+      }
+      ref={ref}
+      onClick={props.onClick}
+    >
+      <div className="flex items-center justify-start gap-x-5">
+        <CalendarIcon className="w-7 h-7 text-primary-600" aria-hidden="true" />
+        <span className="text-xl text-primary-600">
+          {selected[0]
+            ? selected[0].toDateString() + " - " + selected[1]?.toDateString()
+            : "Select Date"}
+        </span>
+      </div>
+
+      <ChevronDownIcon
+        className="w-7 h-7 text-primary-600"
+        aria-hidden="true"
+      />
+    </button>
+  ));
+  MenuOpener.displayName = "ExampleCustomInput";
 
   return (
     <>
-      <button
-        className={
-          "min-h-[inherit] flex items-center justify-between outline-none focus:outline-none " +
-          className
-        }
-        onClick={() => setIsOpen((p) => !p)}
-      >
-        <div className="flex items-center justify-start gap-x-5">
-          <CalendarIcon
-            className="w-7 h-7 text-primary-600"
-            aria-hidden="true"
-          />
-          <span className="text-xl text-primary-600">
-            {selected[0] ? selected[0].toDateString() : "Select Date"}
-          </span>
-        </div>
-
-        <ChevronDownIcon
-          className="w-7 h-7 text-primary-600"
-          aria-hidden="true"
-        />
-      </button>
+      <DatePicker
+        onChange={onChange}
+        startDate={selected[0]}
+        endDate={selected[1]}
+        selectsRange={true}
+        withPortal
+      />
     </>
   );
 };
