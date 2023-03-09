@@ -46,7 +46,7 @@ export default function PropertyPage(props: Props): JSX.Element {
       {/* Content */}
       <div
         className={
-          "container mx-auto grid grid-cols-1 md:grid-cols-[1fr_30%] gap-20 mt-12"
+          "container mx-auto grid grid-cols-1 md:grid-cols-[1fr_25%] gap-20 mt-12"
         }
       >
         {/* ROW 1 - NAME and PRICE card */}
@@ -75,7 +75,11 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* Price Card */}
-        <div className={"md:col-span-1 md:row-span-2 p-8 rounded border border-gray-200"}>
+        <div
+          className={
+            "md:col-span-1 md:row-span-2 p-8 rounded border border-gray-200"
+          }
+        >
           <div className={"flex flex-col " + Font.className}>
             <p className={"text-primary-500 text-lg"}>Price</p>
             <p className={"text-4xl text-primary-500 font-bold"}>
