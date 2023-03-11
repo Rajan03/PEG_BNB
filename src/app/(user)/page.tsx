@@ -31,8 +31,8 @@ export default function Home(): React.ReactNode {
       {/* POPULAR CATEGORIES SECTION */}
       <PopularCategories {...popularShortRentals} />
 
-      {/* AD FOR STAY SECTION */}
-      <AdForStay {...adForStay} />
+      {/* LIST PROPERTY SECTION */}
+      <ListProperty {...listMyProperty} />
 
       {/* FEATURED PROPERTIES SECTION */}
       <FeaturedProperties {...featuredProperties} />
@@ -40,8 +40,8 @@ export default function Home(): React.ReactNode {
       {/* CUSTOMERS REVIEWS */}
       <CustomerReviews {...reviews} />
 
-      {/* LIST PROPERTY SECTION */}
-      <ListProperty {...listMyProperty} />
+      {/* AD FOR STAY SECTION */}
+      <AdForStay {...adForStay} />
     </>
   );
 }
