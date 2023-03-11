@@ -42,14 +42,14 @@ export const SearchFilter = ({ className }: { className?: string }) => {
       >
         <div
           className="container md:w-[80%] mx-auto min-h-[7rem] bg-white shadow-lg rounded-2xl flex justify-start items-stretch gap-x-5
-        border border-gray-50"
+        border border-gray-50 "
         >
           {/* Location Picker */}
           <DropDownModal
             options={LOptions}
             selected={selectedLocation}
             setSelected={setSelectedLocation}
-            className="flex-1 px-5 border-r border-neutral-200"
+            className="flex-1 px-5 border-r border-neutral-200 min-w-[15rem]"
             modalHeader="Where are you going?"
             icon={<MapIcon className="w-7 h-7 text-primary-600" />}
           />
@@ -59,7 +59,7 @@ export const SearchFilter = ({ className }: { className?: string }) => {
             showDropIcon
             selected={selectedDates}
             setSelected={onDateChange}
-            className="flex-1 px-5 border-r border-neutral-200"
+            className="flex-1 px-5 border-r border-neutral-200 min-w-[23rem]"
           />
 
           {/* Guests */}
@@ -67,7 +67,7 @@ export const SearchFilter = ({ className }: { className?: string }) => {
             options={GOptions}
             selected={selectedGuests}
             setSelected={setSelectedGuests}
-            className="flex-1 px-5"
+            className="flex-1 px-5 min-w-[13rem]"
             modalHeader="No. of Guests"
             icon={<UsersIcon className="w-7 h-7 text-primary-600" />}
           />
