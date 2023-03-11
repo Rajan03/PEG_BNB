@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { CalendarIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
-import { DateRangePicker, RangeKeyDict } from "react-date-range";
+import { DateRange, RangeKeyDict } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { Modal } from "../Portals";
@@ -30,7 +30,6 @@ export const DateRangeModal = ({
   const onChange = (dates: RangeKeyDict) => {
     const { selection } = dates;
 
-    console.log(selection);
     if (selection.startDate && selection.endDate) {
       setSelected([selection.startDate, selection.endDate]);
     }
@@ -72,7 +71,8 @@ export const DateRangeModal = ({
           className="relative min-w-[35rem] min-h-[35rem]
          bg-white shadow-2xl rounded-2xl"
         >
-          <DateRangePicker
+          <DateRange
+            moveRangeOnFirstSelection={false}
             ranges={[selected]}
             onChange={onChange}
             color={"#e2a69a"}
