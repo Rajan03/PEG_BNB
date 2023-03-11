@@ -1,13 +1,14 @@
 "use client";
 
-import { propertiesDetailsArr } from "@/constant/data";
+import { useState } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { EB_Garamond } from "@next/font/google";
+import { propertiesDetailsArr } from "@/constant/data";
 
 import Carousel from "@/components/Carousel";
 import { Property } from "@/types/app";
-import { DateInput, Rating, ReviewCard, SimpleButton } from "@/components";
+import { DateRangeModal, Rating, ReviewCard, SimpleButton } from "@/components";
 
 const Font = EB_Garamond({
   subsets: ["latin"],
@@ -23,6 +24,11 @@ const getProperty = (id: string) => {
   return propertiesDetailsArr[0];
 };
 export default function PropertyPage(props: Props): JSX.Element {
+  const [selectedDates, setSelectedDates] = useState({
+    startDate: new Date(),
+    endDate: new Date(),
+    key: "selection",
+  });
   const property: Property = getProperty(props.params.id);
   const avgRating = property.reviews.reduce((acc, review) => {
     return acc + review.rating;
@@ -31,6 +37,14 @@ export default function PropertyPage(props: Props): JSX.Element {
   if (!property) {
     return notFound();
   }
+
+  const onDateChange = ([start, end]: Date[]) => {
+    setSelectedDates({
+      startDate: start,
+      endDate: end,
+      key: "selection",
+    });
+  };
 
   return (
     <div className={"pt-[9rem]"}>
@@ -46,7 +60,7 @@ export default function PropertyPage(props: Props): JSX.Element {
       {/* Content */}
       <div
         className={
-          "container mx-auto grid grid-cols-1 md:grid-cols-[1fr_25%] gap-20 mt-12"
+          "container mx-auto grid grid-cols-1 lg:grid-cols-[1fr_30%] gap-20 mt-12"
         }
       >
         {/* ROW 1 - NAME and PRICE card */}
@@ -75,11 +89,7 @@ export default function PropertyPage(props: Props): JSX.Element {
         </div>
 
         {/* Price Card */}
-        <div
-          className={
-            "md:col-span-1 md:row-span-2 p-8 rounded border border-gray-200"
-          }
-        >
+        <div className={"md:col-span-1 p-8 rounded border border-gray-200"}>
           <div className={"flex flex-col " + Font.className}>
             <p className={"text-primary-500 text-lg"}>Price</p>
             <p className={"text-4xl text-primary-500 font-bold"}>
@@ -87,12 +97,16 @@ export default function PropertyPage(props: Props): JSX.Element {
             </p>
           </div>
 
-          <div className={"flex items-center gap-x-4 mt-7"}>
-            <DateInput />
+          <div className={"flex items-center gap-x-4 mt-9"}>
+            <DateRangeModal
+              selected={selectedDates}
+              setSelected={onDateChange}
+              className="flex-1 py-5 px-3 border border-neutral-200"
+            />
           </div>
 
           <SimpleButton
-            className={"w-full mt-7"}
+            className={"w-full mt-9"}
             clickHandler={() => console.log("Hello")}
           >
             Book Now

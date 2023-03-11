@@ -56,6 +56,7 @@ export const SearchFilter = ({ className }: { className?: string }) => {
 
           {/* Date range Picker */}
           <DateRangeModal
+            showDropIcon
             selected={selectedDates}
             setSelected={onDateChange}
             className="flex-1 px-5 border-r border-neutral-200"

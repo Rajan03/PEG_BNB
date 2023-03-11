@@ -15,10 +15,16 @@ type Props = {
   };
   setSelected: (value: Date[]) => void;
 
+  showDropIcon?: boolean;
   className?: string;
 };
 
-export const DateRangeModal = ({ selected, setSelected, className }: Props) => {
+export const DateRangeModal = ({
+  selected,
+  setSelected,
+  className,
+  showDropIcon,
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onChange = (dates: RangeKeyDict) => {
@@ -53,10 +59,12 @@ export const DateRangeModal = ({ selected, setSelected, className }: Props) => {
           </span>
         </div>
 
-        <ChevronDownIcon
-          className="w-7 h-7 text-primary-600"
-          aria-hidden="true"
-        />
+        {showDropIcon && (
+          <ChevronDownIcon
+            className="w-7 h-7 text-primary-600"
+            aria-hidden="true"
+          />
+        )}
       </button>
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
