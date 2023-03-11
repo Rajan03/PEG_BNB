@@ -74,7 +74,9 @@ const Hero: React.FC<Props> = (props: Props) => {
           isLink
           linkTo={NavLinks.bookStay}
           action={button}
-          className={"w-[16rem] h-[5rem] mt-[3rem]"}
+          className={
+            "w-[16rem] h-[5rem] flex justify-center items-center mt-[3rem]"
+          }
         />
       </div>
 

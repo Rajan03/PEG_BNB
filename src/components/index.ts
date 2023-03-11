@@ -13,6 +13,7 @@ import PropertyCard from "./cards/PropertyCard";
 import ReviewCard from "./cards/ReviewCard";
 import Rating from "./common/Rating";
 import PageBanner from "./common/PageBanner";
+import SiteActions from "./SiteActions";
 
 export {
   Logo,
@@ -30,4 +31,5 @@ export {
   PageBanner,
   ReviewCard,
   DateInput,
+  SiteActions,
 };

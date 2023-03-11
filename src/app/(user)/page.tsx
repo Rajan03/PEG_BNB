@@ -1,48 +1,47 @@
 import React from "react";
-import {HomeData} from "@/constant/data";
+import { HomeData } from "@/constant/data";
 import {
-    AdForStay,
-    CustomerReviews,
-    FeaturedProperties,
-    Hero,
-    PopularCategories,
-    SearchFilter,
-    ListProperty
+  AdForStay,
+  CustomerReviews,
+  FeaturedProperties,
+  Hero,
+  PopularCategories,
+  SearchFilter,
+  ListProperty,
 } from "@/sections";
 
 export default function Home(): React.ReactNode {
-    const {
-        heroData,
-        popularShortRentals,
-        adForStay,
-        featuredProperties,
-        reviews,
-        listMyProperty
-    } = HomeData;
+  const {
+    heroData,
+    popularShortRentals,
+    adForStay,
+    featuredProperties,
+    reviews,
+    listMyProperty,
+  } = HomeData;
 
-    return (
-        <>
-            {/* HERO SECTION */}
-            <Hero {...heroData} />
+  return (
+    <>
+      {/* HERO SECTION */}
+      <Hero {...heroData} />
 
-            {/* SEARCH SECTION */}
-            <SearchFilter className={'bg-primary-200'}/>
+      {/* SEARCH SECTION */}
+      <SearchFilter isLink className={"bg-primary-200"} />
 
-            {/* POPULAR CATEGORIES SECTION */}
-            <PopularCategories {...popularShortRentals} />
+      {/* POPULAR CATEGORIES SECTION */}
+      <PopularCategories {...popularShortRentals} />
 
-            {/* AD FOR STAY SECTION */}
-            <AdForStay {...adForStay} />
+      {/* AD FOR STAY SECTION */}
+      <AdForStay {...adForStay} />
 
-            {/* FEATURED PROPERTIES SECTION */}
-            <FeaturedProperties {...featuredProperties} />
+      {/* FEATURED PROPERTIES SECTION */}
+      <FeaturedProperties {...featuredProperties} />
 
-            {/* CUSTOMERS REVIEWS */}
-            <CustomerReviews {...reviews} />
+      {/* CUSTOMERS REVIEWS */}
+      <CustomerReviews {...reviews} />
 
-            {/* LIST PROPERTY SECTION */}
-            <ListProperty {...listMyProperty}/>
-
-        </>
-    );
+      {/* LIST PROPERTY SECTION */}
+      <ListProperty {...listMyProperty} />
+    </>
+  );
 }

@@ -87,7 +87,7 @@ export const SearchFilter = ({
               isLink={isLink}
               linkTo={NavLinks.bookStay}
               clickHandler={applyFilters}
-              className="flex-1 rounded-r-2xl"
+              className="flex-1 rounded-r-2xl flex justify-center items-center"
             >
               Search
             </SimpleButton>
