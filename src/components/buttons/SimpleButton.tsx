@@ -1,16 +1,32 @@
 "use client";
 
+import Link from "next/link";
+
 type Props = {
+  isLink?: boolean;
+  linkTo?: string;
   action?: string;
-  clickHandler: () => void;
+  clickHandler?: () => void;
   className?: string;
   children?: React.ReactNode;
 };
 
 const SimpleButton = (props: Props) => {
+  if (props.isLink) {
+    return (
+      <Link
+        href={props.linkTo || "/"}
+        className={`bg-primary-600 border-none outline-none rounded-sm px-5 py-3 
+      text-white text-2xl font-light tracking-wider ${props.className}`}
+      >
+        {props.children || props.action}
+      </Link>
+    );
+  }
+
   return (
     <button
-      onClick={() => props.clickHandler()}
+      onClick={props.clickHandler}
       className={`bg-primary-600 border-none outline-none rounded-sm px-5 py-3 
       text-white text-2xl font-light tracking-wider ${props.className}`}
     >

@@ -148,7 +148,7 @@ const adForStay = {
     "We offer a wide range of rentals, from studio apartments to large family homes, all equipped with modern amenities to make your stay as " +
     "comfortable as possible.",
   image: HOME03IMG4,
-  button: "Book a stay",
+  button: "Contact Us",
 };
 
 const featuredProperties = {

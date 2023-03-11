@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader, SimpleButton } from "@/components";
+import { NavLinks } from "@/constant/data";
 import { EB_Garamond } from "@next/font/google";
 
 const Font = EB_Garamond({
@@ -41,7 +42,8 @@ export default function WelcomeSection(props: Props): JSX.Element {
 
         <SimpleButton
           action={action}
-          clickHandler={() => console.log("clicked")}
+          isLink
+          linkTo={NavLinks.contact}
           className={"mt-16 py-5" + " px-8"}
         />
       </div>

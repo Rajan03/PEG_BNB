@@ -1,4 +1,5 @@
 import { PropertyCard, SectionHeader, TextBtn } from "@/components";
+import { NavLinks } from "@/constant/data";
 import { StaticImageData } from "next/image";
 import { HiOutlineChevronRight } from "react-icons/hi";
 
@@ -40,7 +41,9 @@ const FeaturedProperties = (props: Props) => {
         className="mt-24 flex flex-row justify-start items-center gap-2 cursor-pointer
       hover:scale-105 transition-all duration-300 ease-in-out"
       >
-        <TextBtn>View all properties </TextBtn>
+        <TextBtn isLink linkTo={NavLinks.bookStay}>
+          View all properties
+        </TextBtn>
         <HiOutlineChevronRight className="h-6 w-6 ml-2 animate-pulse" />
       </div>
     </div>

@@ -6,6 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import { SimpleButton } from "@/components";
 import { DOTS, PLANE } from "@/constant/images";
 import { linearAnimation } from "@/constant/constant";
+import { NavLinks } from "@/constant/data";
 
 type Props = {
   title: string;
@@ -28,10 +29,6 @@ type Props = {
 
 const Hero: React.FC<Props> = (props: Props) => {
   const { title, subtitle, button, imageLeft, imageRight } = props;
-
-  const bookAStay = () => {
-    throw new Error("Not implemented");
-  }
 
   return (
     <div
@@ -74,8 +71,9 @@ const Hero: React.FC<Props> = (props: Props) => {
           {subtitle}
         </p>
         <SimpleButton
+          isLink
+          linkTo={NavLinks.bookStay}
           action={button}
-          clickHandler={bookAStay}
           className={"w-[16rem] h-[5rem] mt-[3rem]"}
         />
       </div>

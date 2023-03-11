@@ -2,6 +2,7 @@
 "use client";
 
 import { SimpleButton } from "@/components";
+import { NavLinks } from "@/constant/data";
 import Image, { StaticImageData } from "next/image";
 
 type Props = {
@@ -35,7 +36,8 @@ const AdForStay = (props: Props) => {
 
         <SimpleButton
           action={button}
-          clickHandler={() => console.log(" Hey")}
+          isLink
+          linkTo={NavLinks.contact}
           className="mt-16 px-16 py-7"
         />
       </div>

@@ -2,10 +2,16 @@
 
 import { useState } from "react";
 import { DateRangeModal, DropDownModal, SimpleButton } from "@/components";
-import { GuestsOption, LocationsOption } from "@/constant/data";
+import { GuestsOption, LocationsOption, NavLinks } from "@/constant/data";
 import { MapIcon, UsersIcon } from "@heroicons/react/24/solid";
 
-export const SearchFilter = ({ className }: { className?: string }) => {
+export const SearchFilter = ({
+  className,
+  isLink,
+}: {
+  className?: string;
+  isLink?: boolean;
+}) => {
   const LOptions = LocationsOption;
   const GOptions = GuestsOption;
 
@@ -26,6 +32,10 @@ export const SearchFilter = ({ className }: { className?: string }) => {
   };
 
   const applyFilters = () => {
+    if (isLink) {
+      return;
+    }
+
     console.log({
       selectedLocation,
       selectedGuests,
@@ -74,6 +84,8 @@ export const SearchFilter = ({ className }: { className?: string }) => {
 
           <div className="col-span-1 flex justify-end items-stretch rounded-r-2xl">
             <SimpleButton
+              isLink={isLink}
+              linkTo={NavLinks.bookStay}
               clickHandler={applyFilters}
               className="flex-1 rounded-r-2xl"
             >
