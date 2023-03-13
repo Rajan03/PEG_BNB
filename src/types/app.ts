@@ -26,7 +26,7 @@ export type Property = {
   overview: string;
   images: StaticImageData[];
   rating: number;
-  price: number;
+  price: number | string;
   reviews: Review[];
 };
 

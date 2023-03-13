@@ -21,7 +21,7 @@ type Props = {
 };
 
 const getProperty = (id: string) => {
-  return propertiesDetailsArr[0];
+  return propertiesDetailsArr.find((property) => property.slug === id);
 };
 export default function PropertyPage(props: Props): JSX.Element {
   const [selectedDates, setSelectedDates] = useState({
@@ -29,10 +29,12 @@ export default function PropertyPage(props: Props): JSX.Element {
     endDate: new Date(),
     key: "selection",
   });
-  const property: Property = getProperty(props.params.id);
-  const avgRating = property.reviews.reduce((acc, review) => {
-    return acc + review.rating;
-  }, 0);
+  const property: Property | undefined = getProperty(props.params.id);
+  const avgRating = property
+    ? property.reviews.reduce((acc, review) => {
+        return acc + review.rating;
+      }, 0)
+    : 0;
 
   if (!property) {
     return notFound();
