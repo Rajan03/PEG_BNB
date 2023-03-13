@@ -61,7 +61,7 @@ const PropertyCard = (props: Props) => {
 
         <div className="flex flex-row justify-between items-baseline gap-x-1">
           <p className="text-3xl font-semibold mt-7 text-primary-600">
-            ${price}
+            {price}
           </p>
           <span className="text-lg text-primary-600 font-light">/ night</span>
         </div>

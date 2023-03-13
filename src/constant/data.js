@@ -418,7 +418,7 @@ const properties = [
     title: "High-end Villa Spa Pool & Harbour Views",
     slug: "high-end-modern-villa-spa-pool-harbour-views",
     location: "Auckland, New Zealand",
-    price: "$384 NZD",
+    price: "₹19,200",
     image: HOME01IMG3,
     rating: 4.5,
   },
