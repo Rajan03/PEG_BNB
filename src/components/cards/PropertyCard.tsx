@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import { HiHeart } from "react-icons/hi";
 import Rating from "../common/Rating";
-import {EB_Garamond} from "@next/font/google";
+import { EB_Garamond } from "@next/font/google";
 import Link from "next/link";
-import {NavLinks} from "@/constant/data";
+import { NavLinks } from "@/constant/data";
 
 type Props = {
   id: number;
@@ -12,7 +12,7 @@ type Props = {
   location: string;
   image: StaticImageData;
   rating: number;
-  price: number;
+  price: number | string;
 
   className?: string;
 };
@@ -25,7 +25,8 @@ const Font = EB_Garamond({
 const PropertyCard = (props: Props) => {
   const { title, location, image, rating, price, className } = props;
   return (
-    <Link href={NavLinks.bookStay + `/${props.slug}`}
+    <Link
+      href={NavLinks.bookStay + `/${props.slug}`}
       className={
         "min-w-[32rem] max-w-[32rem] shadow-xl rounded-xl " + className
       }
@@ -48,7 +49,7 @@ const PropertyCard = (props: Props) => {
       <div
         className={
           "px-5 pb-9 mt-9 flex flex-col justify-between items-center " +
-            Font.className
+          Font.className
         }
       >
         <Rating rating={rating} showRating />
