@@ -415,7 +415,7 @@ const properties = [
   },
   {
     id: 2,
-    title: "High-end Modern Villa Spa Pool & Harbour Views",
+    title: "High-end Villa Spa Pool & Harbour Views",
     slug: "high-end-modern-villa-spa-pool-harbour-views",
     location: "Auckland, New Zealand",
     price: "$384 NZD",
@@ -424,7 +424,7 @@ const properties = [
   },
   {
     id: 3,
-    title: "Cheerful two bedroom brand new cottage near lake",
+    title: "Cheerful 2 bedroom cottage near lake",
     slug: "cheerful-two-bedroom-brand-new-cottage-near-lake",
     location: "Altmar, New York, United States",
     price: "₹9,842",
@@ -433,7 +433,7 @@ const properties = [
   },
   {
     id: 4,
-    title: "2 bedroom unit in Oswego near SUNY and Hospital",
+    title: "2 bedroom unit in Oswego near Hospital",
     slug: "2-bedroom-unit-in-oswego-near-suny-and-hospital",
     location: "Oswego, New York, USA",
     price: "₹7,956",
@@ -442,7 +442,7 @@ const properties = [
   },
   {
     id: 5,
-    title: "1 bedroom unit in Oswego near SUNY and Hospital",
+    title: "1 bedroom unit in Oswego near Hospital",
     slug: "1-bedroom-unit-in-oswego-near-suny-and-hospital",
     location: "Oswego, New York, USA",
     price: 1000,
