@@ -727,7 +727,7 @@ export const propertiesDetailsArr = [
       "☆ Aircon to keep the house warm in winter and cool in summer.\n" +
       "☆ Ultimate outdoor living with BBQ, Spa pool, bar and dining areas.\n" +
       "☆ Entertainment with Smart TV, Alexa's music and ping pong table in the garage.",
-    price: "$384 NZD",
+    price: "₹19,200",
     images: [
       HOME01IMG1,
       HOME01IMG2,
