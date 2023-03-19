@@ -39,3 +39,10 @@ export type Review = {
   comment: string;
   date: string;
 };
+
+export type ContactFormData = {
+    name: string;
+    email: string;
+    message: string;
+
+}

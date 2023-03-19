@@ -8,6 +8,7 @@ type Props = {
   action?: string;
   clickHandler?: () => void;
   className?: string;
+  type?: "button" | "submit" | "reset";
   children?: React.ReactNode;
 };
 
@@ -27,6 +28,7 @@ const SimpleButton = (props: Props) => {
   return (
     <button
       onClick={props.clickHandler}
+        type={props.type || "button"}
       className={`bg-primary-600 border-none outline-none rounded-sm px-5 py-3 
       text-white text-2xl font-light tracking-wider ${props.className}`}
     >
