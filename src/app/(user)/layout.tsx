@@ -1,7 +1,7 @@
 import React from "react";
 import {Poppins} from "@next/font/google";
 import "@/styles/globals.css";
-import {Footer, Navbar, SiteActions} from "@/components";
+import {Footer, Navbar, SiteActions, ToastComponent} from "@/components";
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -20,6 +20,8 @@ export default function RootLayout({
                 className={"text-[45%] sm:text-[52%] xl:text-[64.5%] scrollbar-hide"}
             >
             <body className={poppins.className + " bg-white relative"}>
+            <ToastComponent />
+
             {/* Navbar */}
             <Navbar/>
 
