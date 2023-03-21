@@ -11,6 +11,7 @@ import SectionHeader from "./headers/SectionHeader";
 import CardWithIcon from "./cards/CardWithIcon";
 import PropertyCard from "./cards/PropertyCard";
 import ReviewCard from "./cards/ReviewCard";
+import BookStayForm from "./cards/BookStayForm";
 import Rating from "./common/Rating";
 import PageBanner from "./common/PageBanner";
 import SiteActions from "./SiteActions";
@@ -32,4 +33,5 @@ export {
   ReviewCard,
   DateInput,
   SiteActions,
+  BookStayForm
 };

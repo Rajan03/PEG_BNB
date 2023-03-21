@@ -8,7 +8,7 @@ import { propertiesDetailsArr } from "@/constant/data";
 
 import Carousel from "@/components/Carousel";
 import { Property } from "@/types/app";
-import { DateRangeModal, Rating, ReviewCard, SimpleButton } from "@/components";
+import { DateRangeModal, Rating, ReviewCard, BookStayForm } from "@/components";
 
 const Font = EB_Garamond({
   subsets: ["latin"],
@@ -107,12 +107,7 @@ export default function PropertyPage(props: Props): JSX.Element {
             />
           </div>
 
-          <SimpleButton
-            className={"w-full mt-9"}
-            clickHandler={() => console.log("Hello")}
-          >
-            Book Now
-          </SimpleButton>
+          <BookStayForm dates={[selectedDates.startDate, selectedDates.endDate]} property={property} />
         </div>
 
         {/* ROW 2 - OVERVIEW */}

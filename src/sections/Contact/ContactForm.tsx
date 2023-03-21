@@ -14,7 +14,6 @@ export default function ContactForm({className}: Props): JSX.Element {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(name, email, message)
 
         if (name === '' || email === '' || message === '') {
             alert('Please fill all the fields');
