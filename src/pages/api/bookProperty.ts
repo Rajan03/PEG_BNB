@@ -31,6 +31,7 @@ export default async function handler(
     <ul style="margin: 0; padding: 0; list-style: none;">
       <li style="margin-bottom: 10px;"><span style="font-weight: bold; color: #570a0a">Property name:</span>${data.property.title}</li>
       <li style="margin-bottom: 10px;"><span style="font-weight: bold; color: #570a0a">Property Price:</span>${data.property.price}</li>
+      <li style="margin-bottom: 10px;"><span style="font-weight: bold; color: #570a0a">Property Location:</span>${data.property.location}</li>
       <li style="margin-bottom: 10px;"><span style="font-weight: bold; color: #570a0a">Check-in date:</span>${data.checkIn}</li>
       <li style="margin-bottom: 10px;"><span style="font-weight: bold; color: #570a0a">Check-out date:</span>${data.checkOut}</li>
       <li style="margin-bottom: 10px;"><span style="font-weight: bold; color: #570a0a">User name:</span>${data.name}</li>
