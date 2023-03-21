@@ -3,6 +3,7 @@
 import {SectionHeader, SimpleButton} from "@/components";
 import React, {useState} from "react";
 import {sendContactForm} from "@/lib/api";
+import toast from "react-hot-toast";
 
 type Props = {
     className?: string;
@@ -20,10 +21,16 @@ export default function ContactForm({className}: Props): JSX.Element {
             return;
         }
 
-        await sendContactForm({name, email, message});
-        setName('');
-        setEmail('');
-        setMessage('');
+        try {
+            await sendContactForm({name, email, message});
+            setName('');
+            setEmail('');
+            setMessage('');
+            toast.success('Message sent successfully');
+        }
+        catch (e) {
+            toast.error('Something went wrong');
+        }
     }
 
     return (
