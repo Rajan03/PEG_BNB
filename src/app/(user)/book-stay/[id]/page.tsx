@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import {Toaster} from "react-hot-toast";
 import { EB_Garamond } from "@next/font/google";
 import { propertiesDetailsArr } from "@/constant/data";
 
@@ -50,6 +51,8 @@ export default function PropertyPage(props: Props): JSX.Element {
 
   return (
     <div className={"pt-[9rem]"}>
+      <Toaster/>
+
       {/* Image */}
       <div className={"py-8 container mx-auto"}>
         <Image
