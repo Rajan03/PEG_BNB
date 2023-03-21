@@ -46,3 +46,12 @@ export type ContactFormData = {
     message: string;
 
 }
+
+export type BookingFormData = {
+    name: string;
+    email: string;
+    phone: string;
+    checkIn: string;
+    checkOut: string;
+    property: Property;
+}
