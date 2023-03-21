@@ -7,6 +7,7 @@
     <list default="true" id="f74feb37-87d0-4b8e-bd21-b1deb8701341" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/pages/api/bookProperty.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/BookStayForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/BookStayForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/app.ts" afterDir="false" />
     </list>
@@ -77,7 +78,7 @@
       <workItem from="1679234519261" duration="8086000" />
       <workItem from="1679328460828" duration="615000" />
       <workItem from="1679406100337" duration="565000" />
-      <workItem from="1679407759983" duration="7329000" />
+      <workItem from="1679407759983" duration="7532000" />
     </task>
     <servers />
   </component>

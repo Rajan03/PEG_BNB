@@ -14,7 +14,7 @@ export const sendContactForm = async (data: ContactFormData) => {
 
 
 export const sendBookingForm = async (data: BookingFormData) => {
-    const response = await fetch('/api/contact', {
+    const response = await fetch('/api/bookProperty', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

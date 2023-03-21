@@ -6,6 +6,7 @@ import {SimpleButton} from "@/components";
 import {Modal} from "@/components/Portals";
 import {Property} from "@/types/app";
 import toast from "react-hot-toast";
+import {sendBookingForm} from "@/lib/api";
 
 const BookStayForm = (props: { dates: Date[], property: Property }) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +38,7 @@ const BookStayFormModal = ({isOpen, setIsOpen, dates, property}: {
     const [email, setEmail] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
 
-    const onS = (e: React.FormEvent<HTMLFormElement>) => {
+    const onS = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (name === '' || email === '' || phone === '') {
@@ -45,7 +46,24 @@ const BookStayFormModal = ({isOpen, setIsOpen, dates, property}: {
             return;
         }
 
-        console.log({name, email, phone, dates, property});
+        try {
+            await sendBookingForm({
+                name, email, phone, property,
+                checkIn: moment(dates[0]).format('YYYY-MM-DD'),
+                checkOut: moment(dates[1]).format('YYYY-MM-DD'),
+            });
+
+            setIsOpen(false);
+            setName('');
+            setEmail('');
+            setPhone('');
+
+            toast.success('Booking form sent successfully');
+        } catch (e) {
+            toast.error('Something went wrong');
+            return;
+        }
+
     }
     return (
         <>
