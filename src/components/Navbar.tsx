@@ -44,7 +44,7 @@ export default function Navbar(): JSX.Element {
             <div className="flex flex-col justify-start items-start">
               <p className="text-lg font-light text-primary-500">Call Us</p>
               <p className="text-xl font-medium text-primary-600">
-                911234567890
+                +64 210 764 030
               </p>
             </div>
           </div>
