@@ -280,13 +280,11 @@ const reviews = {
     {
       id: 1,
       date: "13 Jan 2023",
-      name: "John Cena",
+      name: "Chris martin",
       location: "Auckland, USA",
       comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+        "The best place to stay in Auckland. The house is very clean and tidy. " +
+        "The host is very friendly and helpful. The location is very convenient. ",
       avatar: HOME02IMG1,
       reviewed: "13 Jan 2023",
       rating: 4.5,
@@ -294,13 +292,11 @@ const reviews = {
     {
       id: 2,
       date: "2 days ago",
-      name: "John Snow",
+      name: "Louis Tomlinson",
       location: "New York, USA",
       comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+        "The best place to stay in New York. The house is very clean and tidy. " +
+          "The host is very friendly and helpful. The location is very convenient.",
       avatar: HOME02IMG2,
       reviewed: "2 days ago",
       rating: 4.5,
@@ -491,74 +487,26 @@ const customerReviews = {
   action: "Contact",
   reviews: [
     {
-      name: "John Cena",
+      id: 1,
+      date: "13 Jan 2023",
+      name: "Chris martin",
       location: "Auckland, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG1,
+      comment:
+          "The best place to stay in Auckland. The house is very clean and tidy. " +
+          "The host is very friendly and helpful. The location is very convenient. ",
+      avatar: HOME02IMG1,
       reviewed: "13 Jan 2023",
       rating: 4.5,
     },
     {
-      name: "Karan Aujla",
+      id: 2,
+      date: "2 days ago",
+      name: "Louis Tomlinson",
       location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Pankaj Tripathi",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Ammy Virk",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Karan Aujla",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Pankaj Tripathi",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
+      comment:
+          "The best place to stay in New York. The house is very clean and tidy. " +
+          "The host is very friendly and helpful. The location is very convenient.",
+      avatar: HOME02IMG2,
       reviewed: "2 days ago",
       rating: 4.5,
     },
