@@ -441,7 +441,7 @@ const properties = [
     title: "1 bedroom unit in Oswego near Hospital",
     slug: "1-bedroom-unit-in-oswego-near-suny-and-hospital",
     location: "Oswego, New York, USA",
-    price: 1000,
+    price: "₹2200",
     image: HOME05IMG1,
     rating: 4.5,
   },
@@ -487,26 +487,22 @@ const customerReviews = {
   action: "Contact",
   reviews: [
     {
-      id: 1,
-      date: "13 Jan 2023",
       name: "Chris martin",
       location: "Auckland, USA",
-      comment:
+      review:
           "The best place to stay in Auckland. The house is very clean and tidy. " +
           "The host is very friendly and helpful. The location is very convenient. ",
-      avatar: HOME02IMG1,
+      image: HOME02IMG1,
       reviewed: "13 Jan 2023",
       rating: 4.5,
     },
     {
-      id: 2,
-      date: "2 days ago",
       name: "Louis Tomlinson",
       location: "New York, USA",
-      comment:
+      review:
           "The best place to stay in New York. The house is very clean and tidy. " +
           "The host is very friendly and helpful. The location is very convenient.",
-      avatar: HOME02IMG2,
+      image: HOME02IMG2,
       reviewed: "2 days ago",
       rating: 4.5,
     },
