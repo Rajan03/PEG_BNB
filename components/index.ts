@@ -3,7 +3,7 @@ import Button from "./Button";
 import Input from "./input/Input";
 
 import MenuWrapper from "./menu/MenuWrapper";
+import Modal from "./modal/Modal";
+import Avatar from "@/components/Avatar";
 
-import LoginModal from "./modal/LoginModal";
-
-export { Navbar, MenuWrapper, Button, LoginModal, Input };
+export { Navbar, MenuWrapper, Button, Input, Modal, Avatar };

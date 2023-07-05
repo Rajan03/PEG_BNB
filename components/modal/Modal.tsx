@@ -42,7 +42,7 @@ export default function Modal(props: ModalProps) {
                                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                                     {/* MODAL TITLE */}
                                     <div className='h-[3.5rem] border-b border-neutral-200 flex justify-center items-center p-6'>
-                                        <IoIosCloseCircleOutline className="absolute top-[1rem] left-5 w-6 h-6 cursor-pointer text-gray-900 hover:text-primary-600 
+                                        <IoIosCloseCircleOutline className="absolute top-[1rem] left-5 w-6 h-6 cursor-pointer text-gray-900 hover:text-primary-600
                                             hover:scale-105 transition-all" onClick={onClose} />
                                         <p className='text-lg font-medium text-gray-900'>{dialogFor}</p>
                                     </div>
@@ -58,7 +58,7 @@ export default function Modal(props: ModalProps) {
                                     <div className="mt-3 p-6">{props.children}</div>
 
                                     {/* MODAL ACTIONS */}
-                                    <div className=" flex justify-start items-center gap-x-3 px-6 mt-3">
+                                    <div className="flex justify-start items-center gap-x-3 px-6 mt-3">
                                         <Button label={primaryAction} onClick={primaryActionCallback} disabled={disable} small className='w-full' />
                                         {secondaryAction && secondaryActionCallback && (
                                             <Button label={secondaryAction} onClick={secondaryActionCallback} disabled={disable} theme='neutral'
@@ -66,7 +66,7 @@ export default function Modal(props: ModalProps) {
                                     </div>
 
                                     {/* MODAL FOOTER */}
-                                    {footer && <div className="mt-2 p-6">{footer}</div>}
+                                    {footer ? <div className="mt-2 p-6">{footer}</div> : <div className="mt-2 p-6" />}
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>

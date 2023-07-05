@@ -3,10 +3,10 @@ export const Images = {
 };
 
 export const Navigation = {
-  HOME: "/",
-  "BOOK A STAY": "/book-a-stay",
-  ABOUT: "/about",
-  CONTACT: "/contact",
+  home: "/",
+  "Book a stay": "/book-a-stay",
+  about: "/about",
+  contact: "/contact",
 };
 
 export const PageMetaData = {
