@@ -49,7 +49,7 @@ export default function Footer() {
                         <ul className="flex flex-col justify-start items-start gap-9">
                             <li className="text-xl font-light flex flex-row justify-start items-center gap-2">
                                 <HiOutlinePhone className="h-7 w-7 inline-block mr-2"/>
-                                +1 234 567 890
+                                +64 210 764 030
                             </li>
                             <li className="text-xl font-light flex flex-row justify-start items-center gap-2">
                                 <HiOutlineMail className="h-7 w-7 inline-block mr-2"/>

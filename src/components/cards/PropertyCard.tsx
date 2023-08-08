@@ -12,7 +12,7 @@ type Props = {
   location: string;
   image: StaticImageData;
   rating: number;
-  price: number | string;
+  price: string;
 
   className?: string;
 };

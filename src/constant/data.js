@@ -245,30 +245,30 @@ const featuredProperties = {
   properties: [
     {
       id: 1,
-      slug: "1-bedroom-unit-in-oswego-near-hospital",
-      title: "1 bedroom unit in Oswego near hospital",
-      location: "Oswego, New York, USA",
-      price: 1000,
-      image: HOME01IMG1,
-      rating: 4.5,
+      title: "Cheerful 5-bedroom resort with heated pool",
+      slug: "cheerful-5-bedroom-resort-with-heated-pool",
+      location: "East Stroudsburg, Pennsylvania, United States",
+      price: "₹26,119",
+      image: HOME02IMG1,
+      rating: 5.0,
     },
     {
       id: 2,
-      slug: "2-bedroom-apartment-in-los-angeles",
-      title: "Cheerful 5 bedroom resort with heated Pool",
-      location: "East Stroudsburg, Pennsylvania, USA",
-      price: 1000,
-      image: HOME01IMG1,
+      title: "High-end Villa Spa Pool & Harbour Views",
+      slug: "high-end-modern-villa-spa-pool-harbour-views",
+      location: "Auckland, New Zealand",
+      price: "₹19,200",
+      image: HOME01IMG3,
       rating: 4.5,
     },
     {
       id: 3,
-      slug: "3-bedroom-apartment-in-los-angeles",
-      title: "Cheerful 5 bedroom resort with heated Pool",
-      location: "East Stroudsburg, Pennsylvania, USA",
-      price: 1000,
-      image: HOME01IMG1,
-      rating: 4.5,
+      title: "Cheerful 2 bedroom cottage near lake",
+      slug: "cheerful-two-bedroom-brand-new-cottage-near-lake",
+      location: "Altmar, New York, United States",
+      price: "₹9,842",
+      image: HOME03IMG1,
+      rating: 4.43,
     },
   ],
 };
@@ -280,13 +280,11 @@ const reviews = {
     {
       id: 1,
       date: "13 Jan 2023",
-      name: "John Cena",
+      name: "Chris martin",
       location: "Auckland, USA",
       comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+        "The best place to stay in Auckland. The house is very clean and tidy. " +
+        "The host is very friendly and helpful. The location is very convenient. ",
       avatar: HOME02IMG1,
       reviewed: "13 Jan 2023",
       rating: 4.5,
@@ -294,13 +292,11 @@ const reviews = {
     {
       id: 2,
       date: "2 days ago",
-      name: "John Snow",
+      name: "Louis Tomlinson",
       location: "New York, USA",
       comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+        "The best place to stay in New York. The house is very clean and tidy. " +
+          "The host is very friendly and helpful. The location is very convenient.",
       avatar: HOME02IMG2,
       reviewed: "2 days ago",
       rating: 4.5,
@@ -445,7 +441,7 @@ const properties = [
     title: "1 bedroom unit in Oswego near Hospital",
     slug: "1-bedroom-unit-in-oswego-near-suny-and-hospital",
     location: "Oswego, New York, USA",
-    price: 1000,
+    price: "₹2200",
     image: HOME05IMG1,
     rating: 4.5,
   },
@@ -491,73 +487,21 @@ const customerReviews = {
   action: "Contact",
   reviews: [
     {
-      name: "John Cena",
+      name: "Chris martin",
       location: "Auckland, USA",
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+          "The best place to stay in Auckland. The house is very clean and tidy. " +
+          "The host is very friendly and helpful. The location is very convenient. ",
       image: HOME02IMG1,
       reviewed: "13 Jan 2023",
       rating: 4.5,
     },
     {
-      name: "Karan Aujla",
+      name: "Louis Tomlinson",
       location: "New York, USA",
       review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Pankaj Tripathi",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Ammy Virk",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Karan Aujla",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
-      image: HOME02IMG2,
-      reviewed: "2 days ago",
-      rating: 4.5,
-    },
-    {
-      name: "Pankaj Tripathi",
-      location: "New York, USA",
-      review:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, " +
-        "nisl vel tincidunt lacinia, nunc nisl aliquam mauris, vitae lacinia " +
-        "nisl felis eget nunc. Donec euismod, nisl vel tincidunt lacinia, nunc " +
-        "nisl aliquam mauris, vitae lacinia nisl felis eget nunc.",
+          "The best place to stay in New York. The house is very clean and tidy. " +
+          "The host is very friendly and helpful. The location is very convenient.",
       image: HOME02IMG2,
       reviewed: "2 days ago",
       rating: 4.5,
