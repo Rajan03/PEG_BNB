@@ -1,6 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+/**
+ * @type {import('next').NextConfig}
+ *  */
 
-module.exports = nextConfig
+const nextConfig = {
+  experimental: {
+    appDir: true,
+    urlImports: ["https://themer.sanity.build/"],
+  },
+};
+
+module.exports = nextConfig;
