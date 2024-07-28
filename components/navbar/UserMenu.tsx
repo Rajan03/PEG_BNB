@@ -9,6 +9,7 @@ import {Avatar, MenuWrapper} from "@/components";
 interface IUserMenu {
     name: string;
     email: string;
+    image: string;
 }
 export default function UserMenu(props: IUserMenu) {
     const setLoginModalState = useLoginModalAtom(s => s.setLoginModalState);
@@ -39,7 +40,7 @@ export default function UserMenu(props: IUserMenu) {
 
     const trigger = (
         <button className="flex gap-x-2 items-center">
-            <Avatar url={'/user.png'} className="hidden sm:inline-block text-base"/>
+            <Avatar url={props.image} className="hidden sm:inline-block text-base"/>
             <span className="hidden sm:inline-block text-base text-primary-600">{props.name}</span>
         </button>)
 
