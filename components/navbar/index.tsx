@@ -54,7 +54,6 @@ const Navbar = () => {
               name={session.data.user.name!}
               email={session.data.user.email!}
               image={session.data.user.image!}
-              l̥
             />
           )
         ) : (
